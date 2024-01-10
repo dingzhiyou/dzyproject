@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o  -o bin/test_shared_ptr  -Wl,-rpath,/home/dada/project/lib lib/libdzy.so 

@@ -1,4 +1,6 @@
 #include "log.h"
+#include "util.h"
+#include <iterator>
 #include <memory>
 #include <sstream>
 #include <map>
@@ -6,6 +8,14 @@
  
 namespace  dzy{
 
+LogEvent::LogEvent(const char* file,int32_t line,int32_t thread,uint32_t fiber,time_t time,std::shared_ptr<Logger> logger,LogLevel::Level level):m_file(file),m_line(line),m_threadId(thread)
+           ,m_fiberId(fiber),m_time(time),m_logger(logger),m_level(level){
+}
+LogEvent:: ~LogEvent(){
+    
+
+
+}
 const char* LogLevel::ToString(LogLevel::Level level){
     switch (level) {
 #define XX(name)  \
@@ -28,12 +38,15 @@ const char* LogLevel::ToString(LogLevel::Level level){
 
 
 Logger::Logger(const std::string& name):m_name(name){
-
+    m_formatter.reset(new LoggerFormater("%d%T[%p]%T%f:%l%T%c%T%t%T%m \n"));
 }
 void Logger::addAppener(LoggerAppender::ptr appender){
+    if(!appender->getFormatter()){
+        appender->setFormatter(m_formatter);
+    }
     m_appenders.push_back(appender);
 }
-void Logger:: log(LogLevel::Level  level,LogEvent::ptr event){
+void Logger::log(LogLevel::Level  level,LogEvent::ptr event){
     if(level >= m_level){
         for(auto it : m_appenders){
             it->log(shared_from_this(),level, event);
@@ -82,20 +95,19 @@ void FileAppender::reopen(){
         m_filestream.close();
     }
     m_filestream.open(m_name);
-
 }
-FileAppender::FileAppender(LogLevel::Level level,LoggerFormater::ptr formatter,const std::string& name):m_name(name){
+FileAppender::FileAppender(LogLevel::Level level,const std::string& name):m_name(name){
         m_level = level;
-        m_formatter = formatter;
+        reopen();
 }
 void FileAppender::log(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event){
-    if(level > m_level){
+    if(level >= m_level){
         m_filestream << m_formatter->formatter(logger,level, event);
     }
 }
 
 LoggerFormater::LoggerFormater(const std::string& parttern):m_pattern(parttern){
-
+    init();
 }
 std::string LoggerFormater::formatter(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event){
     std::stringstream os;
@@ -239,7 +251,7 @@ void LoggerFormater::init()
 				if(it == s_format_items.end())
 				{
 					m_items.push_back(FormatterItem::ptr(new StringFormatItem("<<format error>>" 
-									+ std::get<0>(i) + ">>")));
+		    						+ std::get<0>(i) + ">>")));
 				}
 				else
 				{
@@ -251,5 +263,37 @@ void LoggerFormater::init()
 }
 
 
+LogManager::LogManager(){
+        auto logger = Logger::ptr(new Logger("dzy"));
+        logger->addAppener(LoggerAppender::ptr(new StdoutAppender()));
+        m_loggers.insert(std::make_pair("root",logger));
+}
+Logger::ptr LogManager::GetLogger(const std::string& name){
+    auto it = m_loggers.find(name);
+    if(it != m_loggers.end()){
+        return it->second;
+    }
+    else {
+        auto root = GetLogger("root");
+        return root;
+    }
+}
+
+Logger::ptr LogManager::GetRoot(){
+        auto root = GetLogger("root");
+        return root;
+}
+
+class Init {
+public:
+    Init(){
+        Singleton<LogManager>::GetInstance()->GetRoot();
+    }
+};
+Init init;
+
 
 }
+
+
+

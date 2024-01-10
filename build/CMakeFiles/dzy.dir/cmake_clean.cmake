@@ -1,0 +1,10 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/dzy.dir/dzy/log.cc.o"
+  "libdzy.pdb"
+  "libdzy.so"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/dzy.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
