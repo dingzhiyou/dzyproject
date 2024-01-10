@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
 # Target rules for targets named test_shared_ptr
 
 # Build rule for target.
@@ -152,6 +165,33 @@ dzy/fast:
 	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/build
 .PHONY : dzy/fast
 
+dzy/config.o: dzy/config.cc.o
+
+.PHONY : dzy/config.o
+
+# target to build an object file
+dzy/config.cc.o:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/config.cc.o
+.PHONY : dzy/config.cc.o
+
+dzy/config.i: dzy/config.cc.i
+
+.PHONY : dzy/config.i
+
+# target to preprocess a source file
+dzy/config.cc.i:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/config.cc.i
+.PHONY : dzy/config.cc.i
+
+dzy/config.s: dzy/config.cc.s
+
+.PHONY : dzy/config.s
+
+# target to generate assembly for a file
+dzy/config.cc.s:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/config.cc.s
+.PHONY : dzy/config.cc.s
+
 dzy/log.o: dzy/log.cc.o
 
 .PHONY : dzy/log.o
@@ -179,6 +219,33 @@ dzy/log.cc.s:
 	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/log.cc.s
 .PHONY : dzy/log.cc.s
 
+dzy/util.o: dzy/util.cc.o
+
+.PHONY : dzy/util.o
+
+# target to build an object file
+dzy/util.cc.o:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/util.cc.o
+.PHONY : dzy/util.cc.o
+
+dzy/util.i: dzy/util.cc.i
+
+.PHONY : dzy/util.i
+
+# target to preprocess a source file
+dzy/util.cc.i:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/util.cc.i
+.PHONY : dzy/util.cc.i
+
+dzy/util.s: dzy/util.cc.s
+
+.PHONY : dzy/util.s
+
+# target to generate assembly for a file
+dzy/util.cc.s:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/util.cc.s
+.PHONY : dzy/util.cc.s
+
 tests/test.o: tests/test.cc.o
 
 .PHONY : tests/test.o
@@ -205,6 +272,33 @@ tests/test.s: tests/test.cc.s
 tests/test.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
+
+tests/test_config.o: tests/test_config.cc.o
+
+.PHONY : tests/test_config.o
+
+# target to build an object file
+tests/test_config.cc.o:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.o
+.PHONY : tests/test_config.cc.o
+
+tests/test_config.i: tests/test_config.cc.i
+
+.PHONY : tests/test_config.i
+
+# target to preprocess a source file
+tests/test_config.cc.i:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.i
+.PHONY : tests/test_config.cc.i
+
+tests/test_config.s: tests/test_config.cc.s
+
+.PHONY : tests/test_config.s
+
+# target to generate assembly for a file
+tests/test_config.cc.s:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
+.PHONY : tests/test_config.cc.s
 
 tests/test_shared_ptr.o: tests/test_shared_ptr.cc.o
 
@@ -240,16 +334,26 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_config"
 	@echo "... test_shared_ptr"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... dzy"
+	@echo "... dzy/config.o"
+	@echo "... dzy/config.i"
+	@echo "... dzy/config.s"
 	@echo "... dzy/log.o"
 	@echo "... dzy/log.i"
 	@echo "... dzy/log.s"
+	@echo "... dzy/util.o"
+	@echo "... dzy/util.i"
+	@echo "... dzy/util.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_config.o"
+	@echo "... tests/test_config.i"
+	@echo "... tests/test_config.s"
 	@echo "... tests/test_shared_ptr.o"
 	@echo "... tests/test_shared_ptr.i"
 	@echo "... tests/test_shared_ptr.s"

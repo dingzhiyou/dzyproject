@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef DZY_LOG_H__
+#define DZY_LOG_H__
 #include <iostream>
 #include <fstream>
 #include <ostream>
@@ -12,7 +12,7 @@
 #include <chrono>
 #include <ctime>
 #include "util.h"
-
+#include "singleton.h"
 
 #define DZY_LOG_LEVEL(logger,level) \
     if(logger->getLevel() <= level) \
@@ -24,7 +24,7 @@
 #define DZY_LOG_ERROR(logger) DZY_LOG_LEVEL(logger,dzy::LogLevel::ERROR)
 #define DZY_LOG_FATAL(logger) DZY_LOG_LEVEL(logger,dzy::LogLevel::FATAL)
 
-
+#define DZY_LOG_ROOT()   dzy::Singleton<dzy::LogManager>::GetInstance()->GetRoot()
 
 namespace dzy{
 
@@ -278,4 +278,4 @@ private:
 typedef Singleton<LogManager> LoggerMgr;
 
 }
-
+#endif

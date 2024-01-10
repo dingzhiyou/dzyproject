@@ -6,21 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/dada/project/dzy/log.cc
-log.h
-/home/dada/project/dzy/log.h
-util.h
-/home/dada/project/dzy/util.h
-iterator
+/home/dada/project/dzy/config.cc
+config.h
+/home/dada/project/dzy/config.h
+
+/home/dada/project/dzy/config.h
+exception
 -
 memory
 -
-sstream
--
-map
--
 functional
 -
+boost/lexical_cast.hpp
+-
+utility
+-
+log.h
+/home/dada/project/dzy/log.h
 
 /home/dada/project/dzy/log.h
 iostream
@@ -47,6 +49,10 @@ ctime
 -
 util.h
 /home/dada/project/dzy/util.h
+singleton.h
+/home/dada/project/dzy/singleton.h
+
+/home/dada/project/dzy/singleton.h
 
 /home/dada/project/dzy/util.h
 bits/stdint-uintn.h

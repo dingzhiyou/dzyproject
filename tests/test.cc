@@ -2,7 +2,17 @@
 #include "../dzy/util.h"
 
 int main(int argc,char** argv){
-   dzy::Logger::ptr root(new dzy::Logger());
+   
+  auto log = dzy::LoggerMgr::GetInstance()->GetRoot();
+   DZY_LOG_FATAL(log)<<"111111111111111111";
+   DZY_LOG_INFO(log)<<"222222222222222";
+   DZY_LOG_DEBUG(log)<<"333333333333333";
+   DZY_LOG_ERROR(log)<<"444444444444444";
+   DZY_LOG_ERROR(log)<<"5555555555555";
+   DZY_LOG_FATAL(log)<<"66666666666666";
+   
+
+    dzy::Logger::ptr root(new dzy::Logger());
    root->addAppener(dzy::LoggerAppender::ptr(new dzy::StdoutAppender));
    std::string str("./log");
    std::string format("%p %d %T");
@@ -17,9 +27,7 @@ int main(int argc,char** argv){
    DZY_LOG_DEBUG(root) << "bbbb";
    DZY_LOG_DEBUG(root) << "aaaa"<<"dada";
    DZY_LOG_DEBUG(root) << "aaaa";
-    auto log = dzy::LoggerMgr::GetInstance()->GetRoot();
-   DZY_LOG_FATAL(log)<<"dadadw3ruhgfrieygh"<<std::endl;
-    
+   
    return  0;
 
 }

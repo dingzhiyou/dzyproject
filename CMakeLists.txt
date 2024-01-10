@@ -7,6 +7,8 @@ set(CMKAE_CXX_FLAGS "$ENV(CXXFLAGS -rdynamic) -O3 -ggdb std=c++11 -Wall -Wno-dep
 
 set (LIB_SRC
     dzy/log.cc
+    dzy/config.cc
+    dzy/util.cc
     )
 
 add_library(dzy SHARED ${LIB_SRC})
@@ -20,6 +22,10 @@ target_link_libraries(test dzy)
 add_executable(test_shared_ptr tests/test_shared_ptr.cc)
 add_dependencies(test_shared_ptr dzy)
 target_link_libraries(test_shared_ptr dzy)
+
+add_executable(test_config tests/test_config.cc)
+add_dependencies(test_config dzy)
+target_link_libraries(test_config dzy)
 
 
 
