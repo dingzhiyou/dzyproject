@@ -63,15 +63,15 @@ include CMakeFiles/test_shared_ptr.dir/flags.make
 CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o: CMakeFiles/test_shared_ptr.dir/flags.make
 CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o: tests/test_shared_ptr.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o -c /home/dada/project/tests/test_shared_ptr.cc
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o -c /home/dada/project/tests/test_shared_ptr.cc
 
 CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/tests/test_shared_ptr.cc > CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/tests/test_shared_ptr.cc > CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.i
 
 CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/tests/test_shared_ptr.cc -o CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/tests/test_shared_ptr.cc -o CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.s
 
 # Object files for target test_shared_ptr
 test_shared_ptr_OBJECTS = \

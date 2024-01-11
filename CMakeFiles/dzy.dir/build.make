@@ -63,41 +63,41 @@ include CMakeFiles/dzy.dir/flags.make
 CMakeFiles/dzy.dir/dzy/log.cc.o: CMakeFiles/dzy.dir/flags.make
 CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/log.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dzy.dir/dzy/log.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/log.cc.o -c /home/dada/project/dzy/log.cc
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/log.cc.o -c /home/dada/project/dzy/log.cc
 
 CMakeFiles/dzy.dir/dzy/log.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/log.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/log.cc > CMakeFiles/dzy.dir/dzy/log.cc.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/log.cc > CMakeFiles/dzy.dir/dzy/log.cc.i
 
 CMakeFiles/dzy.dir/dzy/log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/log.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/log.cc -o CMakeFiles/dzy.dir/dzy/log.cc.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/log.cc -o CMakeFiles/dzy.dir/dzy/log.cc.s
 
 CMakeFiles/dzy.dir/dzy/config.cc.o: CMakeFiles/dzy.dir/flags.make
 CMakeFiles/dzy.dir/dzy/config.cc.o: dzy/config.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dzy.dir/dzy/config.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/config.cc.o -c /home/dada/project/dzy/config.cc
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/config.cc.o -c /home/dada/project/dzy/config.cc
 
 CMakeFiles/dzy.dir/dzy/config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/config.cc > CMakeFiles/dzy.dir/dzy/config.cc.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/config.cc > CMakeFiles/dzy.dir/dzy/config.cc.i
 
 CMakeFiles/dzy.dir/dzy/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/config.cc -o CMakeFiles/dzy.dir/dzy/config.cc.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/config.cc -o CMakeFiles/dzy.dir/dzy/config.cc.s
 
 CMakeFiles/dzy.dir/dzy/util.cc.o: CMakeFiles/dzy.dir/flags.make
 CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/util.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dzy.dir/dzy/util.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/util.cc.o -c /home/dada/project/dzy/util.cc
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/util.cc.o -c /home/dada/project/dzy/util.cc
 
 CMakeFiles/dzy.dir/dzy/util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/util.cc > CMakeFiles/dzy.dir/dzy/util.cc.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/util.cc > CMakeFiles/dzy.dir/dzy/util.cc.i
 
 CMakeFiles/dzy.dir/dzy/util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/util.cc -o CMakeFiles/dzy.dir/dzy/util.cc.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/util.cc -o CMakeFiles/dzy.dir/dzy/util.cc.s
 
 # Object files for target dzy
 dzy_OBJECTS = \

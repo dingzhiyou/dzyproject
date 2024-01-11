@@ -6,6 +6,7 @@
 #include <functional>
 #include <boost/lexical_cast.hpp>
 #include <utility>
+#include <yaml-cpp/node/node.h>
 #include "log.h"
 
 namespace dzy {
@@ -87,16 +88,12 @@ public:
         }
         return std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
    }
+  static void LoadFromYaml(const YAML::Node& node);
+  static ConfigVarBase::ptr LookupBase(const std::string& name);
+  static void ListAllMember(std::string prefix,const YAML::Node& node, std::list<std::pair<std::string,const YAML::Node> >& output);
 private:
     static ConfigMap s_configs;
-
 };
-
-
-
-
-
-
 }
 #endif
 

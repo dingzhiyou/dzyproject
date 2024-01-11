@@ -17,6 +17,8 @@ boost/lexical_cast.hpp
 -
 utility
 -
+yaml-cpp/node/node.h
+-
 log.h
 /home/dada/project/dzy/log.h
 
@@ -65,4 +67,10 @@ stdint.h
 /home/dada/project/tests/test_config.cc
 ../dzy/config.h
 /home/dada/project/dzy/config.h
+yaml-cpp/node/node.h
+-
+yaml-cpp/node/parse.h
+-
+yaml-cpp/yaml.h
+-
 

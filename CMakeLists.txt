@@ -3,6 +3,7 @@ project(dzy)
 
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_CXX_COMPILER "g++")
 set(CMKAE_CXX_FLAGS "$ENV(CXXFLAGS -rdynamic) -O3 -ggdb std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
 
 set (LIB_SRC
@@ -12,20 +13,18 @@ set (LIB_SRC
     )
 
 add_library(dzy SHARED ${LIB_SRC})
-
+include_directories(./yaml-cpp/include/yaml-cpp)
+include_directories(./dzy)
 
 
 add_executable(test tests/test.cc)
 add_dependencies(test dzy)
-target_link_libraries(test dzy)
+target_link_libraries(test dzy yaml-cpp)
 
-add_executable(test_shared_ptr tests/test_shared_ptr.cc)
-add_dependencies(test_shared_ptr dzy)
-target_link_libraries(test_shared_ptr dzy)
 
 add_executable(test_config tests/test_config.cc)
-add_dependencies(test_config dzy)
-target_link_libraries(test_config dzy)
+add_dependencies(test_config dzy yaml-cpp)
+target_link_libraries(test_config dzy yaml-cpp)
 
 
 

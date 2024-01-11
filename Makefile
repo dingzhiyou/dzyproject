@@ -127,19 +127,6 @@ test_config/fast:
 .PHONY : test_config/fast
 
 #=============================================================================
-# Target rules for targets named test_shared_ptr
-
-# Build rule for target.
-test_shared_ptr: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_shared_ptr
-.PHONY : test_shared_ptr
-
-# fast build rule for target.
-test_shared_ptr/fast:
-	$(MAKE) -f CMakeFiles/test_shared_ptr.dir/build.make CMakeFiles/test_shared_ptr.dir/build
-.PHONY : test_shared_ptr/fast
-
-#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -300,33 +287,6 @@ tests/test_config.cc.s:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
 
-tests/test_shared_ptr.o: tests/test_shared_ptr.cc.o
-
-.PHONY : tests/test_shared_ptr.o
-
-# target to build an object file
-tests/test_shared_ptr.cc.o:
-	$(MAKE) -f CMakeFiles/test_shared_ptr.dir/build.make CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.o
-.PHONY : tests/test_shared_ptr.cc.o
-
-tests/test_shared_ptr.i: tests/test_shared_ptr.cc.i
-
-.PHONY : tests/test_shared_ptr.i
-
-# target to preprocess a source file
-tests/test_shared_ptr.cc.i:
-	$(MAKE) -f CMakeFiles/test_shared_ptr.dir/build.make CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.i
-.PHONY : tests/test_shared_ptr.cc.i
-
-tests/test_shared_ptr.s: tests/test_shared_ptr.cc.s
-
-.PHONY : tests/test_shared_ptr.s
-
-# target to generate assembly for a file
-tests/test_shared_ptr.cc.s:
-	$(MAKE) -f CMakeFiles/test_shared_ptr.dir/build.make CMakeFiles/test_shared_ptr.dir/tests/test_shared_ptr.cc.s
-.PHONY : tests/test_shared_ptr.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -335,7 +295,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... test_config"
-	@echo "... test_shared_ptr"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... dzy"
@@ -354,9 +313,6 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
-	@echo "... tests/test_shared_ptr.o"
-	@echo "... tests/test_shared_ptr.i"
-	@echo "... tests/test_shared_ptr.s"
 .PHONY : help
 
 
