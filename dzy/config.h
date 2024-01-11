@@ -5,8 +5,12 @@
 #include <memory>
 #include <functional>
 #include <boost/lexical_cast.hpp>
+#include <sstream>
 #include <utility>
+#include <vector>
 #include <yaml-cpp/node/node.h>
+#include <yaml-cpp/node/parse.h>
+#include <yaml-cpp/yaml.h>
 #include "log.h"
 
 namespace dzy {
@@ -32,7 +36,82 @@ protected:
 private:
 };
 
+template<class T, class F>
+class LexicalCast {
+public:
+        T operator()(const F& v){
+            return boost::lexical_cast<T>(v);
+        }
+};
+
 template<class T>
+class LexicalCast<std::vector<T> ,std::string> { 
+public:
+    std::vector<T> operator()(const std::string& str) { 
+        std::vector<T>  vec;
+        YAML::Node node = YAML::Load(str);
+        std::stringstream ss;
+        for(size_t i = 0;i < node.size();i++){
+            ss.str(""); 
+            ss << node[i];
+            std::cout<<ss.str()<<std::endl;
+            vec.push_back(LexicalCast<T,std::string>()(ss.str()));
+        }
+        return vec;
+    }
+};
+
+template<class T>
+class LexicalCast<std::string, std::vector<T> > { 
+public:
+    std::string operator()(const std::vector<T>& v) { 
+        YAML::Node node ;
+        for(auto i : v){
+                node.push_back(LexicalCast<std::string, T>()(i));
+        }
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+};
+
+
+template<class T>
+class LexicalCast<std::list<T> ,std::string> { 
+public:
+    std::list<T> operator()(const std::string& str) { 
+        std::list<T>  vec;
+        YAML::Node node = YAML::Load(str);
+        std::stringstream ss;
+        for(size_t i = 0;i < node.size();i++){
+            ss.str(""); 
+            ss << node[i];
+            std::cout<<ss.str()<<std::endl;
+            vec.push_back(LexicalCast<T,std::string>()(ss.str()));
+        }
+        return vec;
+    }
+};
+
+template<class T>
+class LexicalCast<std::string, std::list<T> > { 
+public:
+    std::string operator()(const std::list<T>& v) { 
+        YAML::Node node ;
+        for(auto i : v){
+                node.push_back(LexicalCast<std::string, T>()(i));
+        }
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+};
+
+
+
+
+
+template<class T ,class FromString = LexicalCast<T, std::string>, class ToString = LexicalCast<std::string, T> >
 class ConfigVar : public ConfigVarBase {
 public:
     typedef std::shared_ptr<ConfigVar> ptr;
@@ -41,7 +120,7 @@ public:
  
     std::string toString() override {
         try{
-            return boost::lexical_cast<std::string>(m_val);
+            return ToString()(m_val);
         }catch(std::exception& e){
                 DZY_LOG_ERROR(DZY_LOG_ROOT()) << "e.what()  "<<e.what()<<"ConfigVar bad toString from  " << typeid(m_val).name();
         }
@@ -49,7 +128,7 @@ public:
     }
     bool fromString(const std::string& str)override {
             try{
-                    m_val = boost::lexical_cast<T>(str);
+                    m_val = FromString()(str);
             }catch(std::exception& e){
                 DZY_LOG_ERROR(DZY_LOG_ROOT()) << "e.what()  "<<e.what()<<"ConfigVar bad fromString   " << typeid(m_val).name();
                 return false;

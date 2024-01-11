@@ -11,5 +11,10 @@ log:
       formatter: "%d%T%m"
       appender:
             - type: StdoutLogAppender
-              
+
+dzy:
+    port: 80
+    float: 1.22
+    vec: [1,4]
+    lis: [1,3]
 

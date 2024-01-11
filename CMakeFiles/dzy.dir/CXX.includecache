@@ -35,9 +35,17 @@ functional
 -
 boost/lexical_cast.hpp
 -
+sstream
+-
 utility
 -
+vector
+-
 yaml-cpp/node/node.h
+-
+yaml-cpp/node/parse.h
+-
+yaml-cpp/yaml.h
 -
 log.h
 /home/dada/project/dzy/log.h
