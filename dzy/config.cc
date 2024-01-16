@@ -37,11 +37,12 @@ void Config::LoadFromYaml(const YAML::Node& node){
 
             for(auto i : all_members){
                 auto it = LookupBase(i.first);
-
                 if(it){
+                        std::cout<<it->getName()<<std::endl;
                     if(i.second.IsScalar()){
                         it->fromString(i.second.Scalar());
                     }else{
+                        std::cout<<it->getName()<<std::endl;
                         std::stringstream os;
                         os << i.second;
                         it->fromString(os.str());

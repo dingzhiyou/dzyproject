@@ -2,12 +2,14 @@
 #define DZY_CONFIG_H__
 
 #include <exception>
+#include <iostream>
 #include <memory>
 #include <functional>
 #include <boost/lexical_cast.hpp>
 #include <sstream>
 #include <utility>
 #include <vector>
+#include <map>
 #include <yaml-cpp/node/node.h>
 #include <yaml-cpp/node/parse.h>
 #include <yaml-cpp/yaml.h>
@@ -43,6 +45,76 @@ public:
             return boost::lexical_cast<T>(v);
         }
 };
+
+
+template<class T>
+class LexicalCast<std::map<std::string,T> ,std::string> { 
+public:
+    std::map<std::string,T> operator()(const std::string& str) { 
+        std::map<std::string,T>  vec;
+        YAML::Node node = YAML::Load(str);
+        std::stringstream ss;
+        for(auto i = node.begin();i != node.end();i++){
+            ss.str("");
+            ss << i->second;
+            vec.insert(std::make_pair(i->first.Scalar(),LexicalCast<T,std::string>()(ss.str())));
+        }
+        for(auto i : vec)
+            std::cout<<i.first<<"------------"<<i.second<<std::endl;
+        return vec;
+    }
+};
+
+template<class T>
+class LexicalCast<std::string, std::map<std::string,T> > { 
+public:
+    std::string operator()(const std::map<std::string,T>& v) { 
+        YAML::Node node ;
+        for(auto i = v.begin();i != v.end();i++){
+                node.push_back(std::make_pair(i->first,LexicalCast<std::string, T>()(i->second)));
+        }
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+};
+
+
+
+template<class T>
+class LexicalCast<std::set<T> ,std::string> { 
+public:
+    std::set<T> operator()(const std::string& str) { 
+        std::set<T>  vec;
+        YAML::Node node = YAML::Load(str);
+        std::stringstream ss;
+        for(size_t i = 0;i < node.size();i++){
+            ss.str(""); 
+            ss << node[i];
+            vec.inset(LexicalCast<T,std::string>()(ss.str()));
+        }
+        return vec;
+    }
+};
+
+template<class T>
+class LexicalCast<std::string, std::set<T> > { 
+public:
+    std::string operator()(const std::set<T>& v) { 
+        YAML::Node node ;
+        for(auto i : v){
+                node.push_back(LexicalCast<std::string, T>()(i));
+        }
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+};
+
+
+
+
+
 
 template<class T>
 class LexicalCast<std::vector<T> ,std::string> { 
@@ -148,7 +220,7 @@ public:
     typedef std::map<std::string, ConfigVarBase::ptr> ConfigMap;
     
     template<class T>
-    static typename ConfigVar<T>::ptr  Lookup1(const std::string& name) {
+    static typename ConfigVar<T>::ptr  Lookup(const std::string& name) {
         auto it = s_configs.find(name);
         if(it == s_configs.end()){
                 return nullptr;
