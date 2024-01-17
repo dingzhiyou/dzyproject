@@ -47,6 +47,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_config_log.dir/DependInfo.cmake"
   "CMakeFiles/test_config.dir/DependInfo.cmake"
+  "CMakeFiles/test_thread.dir/DependInfo.cmake"
   "CMakeFiles/test.dir/DependInfo.cmake"
   "CMakeFiles/dzy.dir/DependInfo.cmake"
   )

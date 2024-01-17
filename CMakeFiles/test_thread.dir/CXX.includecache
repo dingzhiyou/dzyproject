@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dada/project/dzy/thread.h
+memory
+-
+functional
+-
+pthread.h
+-
+sys/types.h
+-
+unistd.h
+-
+stdio.h
+-
+
+/home/dada/project/tests/test_thread.cc
+../dzy/thread.h
+/home/dada/project/dzy/thread.h
+iostream
+-
+unistd.h
+-
+

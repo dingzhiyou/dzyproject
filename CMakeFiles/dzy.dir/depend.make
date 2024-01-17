@@ -12,6 +12,12 @@ CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/log.h
 CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/singleton.h
 CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/util.h
 
+CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/log.h
+CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/singleton.h
+CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/thread.cc
+CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/thread.h
+CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/util.h
+
 CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/util.cc
 CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/util.h
 

@@ -12,6 +12,12 @@ CMakeFiles/dzy.dir/dzy/log.cc.o
  /home/dada/project/dzy/log.h
  /home/dada/project/dzy/singleton.h
  /home/dada/project/dzy/util.h
+CMakeFiles/dzy.dir/dzy/thread.cc.o
+ /home/dada/project/dzy/log.h
+ /home/dada/project/dzy/singleton.h
+ /home/dada/project/dzy/thread.cc
+ /home/dada/project/dzy/thread.h
+ /home/dada/project/dzy/util.h
 CMakeFiles/dzy.dir/dzy/util.cc.o
  /home/dada/project/dzy/util.cc
  /home/dada/project/dzy/util.h

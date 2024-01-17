@@ -1,1 +1,1 @@
-g++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_config_log.dir/tests/test_config_log.cc.o  -o bin/test_config_log  -Wl,-rpath,/home/dada/project/lib lib/libdzy.so -lyaml-cpp 
+g++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_config_log.dir/tests/test_config_log.cc.o  -o bin/test_config_log  -Wl,-rpath,/home/dada/project/lib lib/libdzy.so -lpthread -lyaml-cpp 

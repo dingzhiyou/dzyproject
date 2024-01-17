@@ -9,6 +9,13 @@ set (LIB_SRC
     dzy/log.cc
     dzy/config.cc
     dzy/util.cc
+    dzy/thread.cc
+    )
+
+set(LIB_LIB 
+    dzy
+    pthread
+    yaml-cpp
     )
 
 add_library(dzy SHARED ${LIB_SRC})
@@ -19,20 +26,22 @@ include_directories(./tests)
 
 add_executable(test tests/test.cc)
 add_dependencies(test dzy)
-target_link_libraries(test dzy yaml-cpp)
+target_link_libraries(test ${LIB_LIB})
 
 
 add_executable(test_config tests/test_config.cc)
 add_dependencies(test_config dzy yaml-cpp)
-target_link_libraries(test_config dzy yaml-cpp)
+target_link_libraries(test_config ${LIB_LIB})
 
 
 add_executable(test_config_log tests/test_config_log.cc)
 add_dependencies(test_config_log dzy)
-target_link_libraries(test_config_log dzy yaml-cpp)
+target_link_libraries(test_config_log ${LIB_LIB})
 
 
-
+add_executable(test_thread tests/test_thread.cc)
+add_dependencies(test_thread dzy)
+target_link_libraries(test_thread ${LIB_LIB})
 
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

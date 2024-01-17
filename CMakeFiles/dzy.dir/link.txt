@@ -1,1 +1,1 @@
-g++ -fPIC  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -shared -Wl,-soname,libdzy.so -o lib/libdzy.so CMakeFiles/dzy.dir/dzy/log.cc.o CMakeFiles/dzy.dir/dzy/config.cc.o CMakeFiles/dzy.dir/dzy/util.cc.o 
+g++ -fPIC  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -shared -Wl,-soname,libdzy.so -o lib/libdzy.so CMakeFiles/dzy.dir/dzy/log.cc.o CMakeFiles/dzy.dir/dzy/config.cc.o CMakeFiles/dzy.dir/dzy/util.cc.o CMakeFiles/dzy.dir/dzy/thread.cc.o 
