@@ -36,6 +36,22 @@ const char* LogLevel::ToString(LogLevel::Level level){
     return  "UNKNOW";
 }
 
+const LogLevel::Level LogLevel::ToLevel(std::string& str){
+    if(str == "UNKNOW"){
+        return LogLevel::UNKNOW;
+    }else if(str == "DEBUG"){
+        return LogLevel::DEBUG;
+    }else if(str == "INFO"){
+        return LogLevel::INFO;
+    }else if(str == "ERROR"){
+        return LogLevel::ERROR;
+    }else if(str == "FATAL"){
+        return LogLevel::FATAL;
+    }
+    else return LogLevel::UNKNOW;
+
+
+}
 
 Logger::Logger(const std::string& name):m_name(name){
     m_formatter.reset(new LoggerFormater("%d%T[%p]%T%f:%l%T%c%T%t%T%m \n"));

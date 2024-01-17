@@ -1,0 +1,15 @@
+logs:
+    - m_name: "system"
+      m_formatter: "%d%T[%p]%T%f:%l%T%c%T%t%T%m \n"
+      m_level: "ERROR"
+      m_appenders:
+        - m_type: 2
+          m_filename: "/home/dada/project/bin/conf/system.log"
+        - m_type: 1
+    - m_name: "loglog"
+      m_formatter: "%d%T[%p]%T%f:%l%T%c%T%t%T%m \n"
+      m_level: "FATAL"
+      m_appenders:
+        - m_type: 1
+
+

@@ -41,6 +41,7 @@ public:
             FATAL = 5
         };
     static const char* ToString(LogLevel::Level level);
+    static const LogLevel::Level ToLevel(std::string& str);
 };
 
 class LogEvent {
@@ -220,6 +221,7 @@ public:
     void delAppener(LoggerAppender::ptr appender);
     std::string getName()const {return m_name;}
     LogLevel::Level getLevel(){return m_level;}
+    void setFormatter(const std::string& f) {m_formatter.reset(new LoggerFormater(f));}
 private:
     std::vector<LoggerAppender::ptr> m_appenders;
     std::string m_name;
@@ -271,6 +273,9 @@ public:
     Logger::ptr GetRoot();
     std::map<std::string ,Logger::ptr>& GetLoggers(){
         return m_loggers;
+    }
+    void addLogger(const std::string& name,Logger::ptr logger){
+        m_loggers[name] = logger;
     }
 private:
     std::map<std::string ,Logger::ptr> m_loggers;

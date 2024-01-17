@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/dada/project/dzy/config.cc
-config.h
-/home/dada/project/dzy/config.h
-log.h
-/home/dada/project/dzy/log.h
-iostream
--
-sstream
--
-utility
--
-vector
--
-yaml-cpp/node/detail/iterator_fwd.h
--
-yaml-cpp/node/node.h
--
-yaml-cpp/node/parse.h
--
-yaml-cpp/yaml.h
--
-
 /home/dada/project/dzy/config.h
 exception
 -
@@ -97,4 +75,10 @@ unistd.h
 -
 stdint.h
 -
+
+/home/dada/project/tests/test_config_log.cc
+../dzy/log.h
+/home/dada/project/dzy/log.h
+../dzy/config.h
+/home/dada/project/dzy/config.h
 

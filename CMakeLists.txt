@@ -4,8 +4,7 @@ project(dzy)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_COMPILER "g++")
-set(CMKAE_CXX_FLAGS "$ENV(CXXFLAGS -rdynamic) -O3 -ggdb std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
-
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
 set (LIB_SRC
     dzy/log.cc
     dzy/config.cc
@@ -15,6 +14,7 @@ set (LIB_SRC
 add_library(dzy SHARED ${LIB_SRC})
 include_directories(./yaml-cpp/include/yaml-cpp)
 include_directories(./dzy)
+include_directories(./tests)
 
 
 add_executable(test tests/test.cc)
@@ -25,6 +25,11 @@ target_link_libraries(test dzy yaml-cpp)
 add_executable(test_config tests/test_config.cc)
 add_dependencies(test_config dzy yaml-cpp)
 target_link_libraries(test_config dzy yaml-cpp)
+
+
+add_executable(test_config_log tests/test_config_log.cc)
+add_dependencies(test_config_log dzy)
+target_link_libraries(test_config_log dzy yaml-cpp)
 
 
 

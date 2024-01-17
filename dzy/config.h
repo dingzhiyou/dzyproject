@@ -38,6 +38,33 @@ protected:
 private:
 };
 
+
+class Person{
+public:
+        Person(const std::string& name,const int age):m_name(name),m_age(age){}
+    std::string m_name;
+    int m_age;
+};
+
+
+struct Appender{
+ public:
+    typedef std::shared_ptr<Appender> ptr;
+     int m_type;
+     std::string m_filename;
+
+};
+struct LogItem {
+public:
+    typedef std::shared_ptr<LogItem> ptr;
+    std::string m_name;
+    std::string m_formatter;
+    std::string m_level;
+    std::vector<Appender::ptr> m_appenders;
+};
+
+
+
 template<class T, class F>
 class LexicalCast {
 public:
@@ -45,6 +72,69 @@ public:
             return boost::lexical_cast<T>(v);
         }
 };
+
+
+template<>
+class LexicalCast<std::vector<LogItem::ptr>, std::string>{
+public:
+    std::vector<LogItem::ptr> operator()(const std::string& str){
+                YAML::Node node =  YAML::Load(str);
+                std::vector<LogItem::ptr> vec;
+                if(node.IsSequence()){
+                    for(size_t s = 0;s < node.size();s++){
+                        LogItem::ptr log(new LogItem);
+                        log->m_name = node[s]["m_name"].as<std::string>();
+                        log->m_formatter = node[s]["m_formatter"].as<std::string>();
+                        log->m_level = node[s]["m_level"].as<std::string>();
+
+
+
+                        for(size_t i =0 ;i < node[s]["m_appenders"].size();i++){
+                        Appender::ptr appen(new Appender); 
+                        appen->m_type = node[s]["m_appenders"][i]["m_type"].as<int>();
+                        if(appen->m_type == 2){
+                            appen->m_filename = node[s]["m_appenders"][i]["m_filename"].as<std::string>();
+                        }
+                        log->m_appenders.push_back(appen);
+
+                    }
+                   vec.push_back(log);
+                }
+          }
+                return vec;
+}
+};
+
+
+class Log_init{
+public: 
+    Log_init();
+};
+
+template<>
+class LexicalCast<Person,std::string>{
+    public:
+        Person operator()(const std::string& str){
+                YAML::Node node = YAML::Load(str);
+                std::string name = node["m_name"].as<std::string>();
+                int age = node["m_age"].as<int>();
+                Person p(name,age);
+                return p;
+        }
+};
+template<>
+class LexicalCast<std::string,Person>{
+    public:
+        std::string operator()(const Person& p){
+            YAML::Node node ;
+            node["name"] = p.m_name;
+            node["age"] = p.m_age;
+            std::stringstream ss;
+            ss << node;
+            return ss.str();
+        }
+};
+
 
 
 template<class T>
@@ -59,8 +149,6 @@ public:
             ss << i->second;
             vec.insert(std::make_pair(i->first.Scalar(),LexicalCast<T,std::string>()(ss.str())));
         }
-        for(auto i : vec)
-            std::cout<<i.first<<"------------"<<i.second<<std::endl;
         return vec;
     }
 };
@@ -126,7 +214,6 @@ public:
         for(size_t i = 0;i < node.size();i++){
             ss.str(""); 
             ss << node[i];
-            std::cout<<ss.str()<<std::endl;
             vec.push_back(LexicalCast<T,std::string>()(ss.str()));
         }
         return vec;
@@ -158,7 +245,6 @@ public:
         for(size_t i = 0;i < node.size();i++){
             ss.str(""); 
             ss << node[i];
-            std::cout<<ss.str()<<std::endl;
             vec.push_back(LexicalCast<T,std::string>()(ss.str()));
         }
         return vec;

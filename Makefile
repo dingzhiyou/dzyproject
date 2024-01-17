@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_config_log
+
+# Build rule for target.
+test_config_log: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config_log
+.PHONY : test_config_log
+
+# fast build rule for target.
+test_config_log/fast:
+	$(MAKE) -f CMakeFiles/test_config_log.dir/build.make CMakeFiles/test_config_log.dir/build
+.PHONY : test_config_log/fast
+
+#=============================================================================
 # Target rules for targets named test_config
 
 # Build rule for target.
@@ -287,6 +300,33 @@ tests/test_config.cc.s:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
 
+tests/test_config_log.o: tests/test_config_log.cc.o
+
+.PHONY : tests/test_config_log.o
+
+# target to build an object file
+tests/test_config_log.cc.o:
+	$(MAKE) -f CMakeFiles/test_config_log.dir/build.make CMakeFiles/test_config_log.dir/tests/test_config_log.cc.o
+.PHONY : tests/test_config_log.cc.o
+
+tests/test_config_log.i: tests/test_config_log.cc.i
+
+.PHONY : tests/test_config_log.i
+
+# target to preprocess a source file
+tests/test_config_log.cc.i:
+	$(MAKE) -f CMakeFiles/test_config_log.dir/build.make CMakeFiles/test_config_log.dir/tests/test_config_log.cc.i
+.PHONY : tests/test_config_log.cc.i
+
+tests/test_config_log.s: tests/test_config_log.cc.s
+
+.PHONY : tests/test_config_log.s
+
+# target to generate assembly for a file
+tests/test_config_log.cc.s:
+	$(MAKE) -f CMakeFiles/test_config_log.dir/build.make CMakeFiles/test_config_log.dir/tests/test_config_log.cc.s
+.PHONY : tests/test_config_log.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,6 +334,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_config_log"
 	@echo "... test_config"
 	@echo "... edit_cache"
 	@echo "... test"
@@ -313,6 +354,9 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_config_log.o"
+	@echo "... tests/test_config_log.i"
+	@echo "... tests/test_config_log.s"
 .PHONY : help
 
 

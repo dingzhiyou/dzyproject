@@ -6,6 +6,7 @@
 
 
 
+dzy::ConfigVar<std::vector<dzy::Person> >::ptr g_person= dzy::Config::Lookup("dzy.person",std::vector<dzy::Person>{dzy::Person("dzy",23),dzy::Person("dadad",29)},"aaa");
 dzy::ConfigVar<std::map<std::string,int> >::ptr g_map= dzy::Config::Lookup("dzy.dzymap", std::map<std::string,int>{std::make_pair("aaa",1),std::make_pair("bbb",2)},"aaa");
 //dzy::ConfigVar<int>::ptr g_int = dzy::Config::Lookup("dzy.port", (int)1,"aaa");
 //dzy::ConfigVar<float>::ptr g_float = dzy::Config::Lookup("dzy.float", (float)1,"aaa");
@@ -21,7 +22,7 @@ void test_log(){
     dzy::Config::LoadFromYaml(node);
 
 }
-int main(){
+void test1(){
     //DZY_LOG_DEBUG(DZY_LOG_ROOT()) << "int-before : "<<g_int->getVal();
     //DZY_LOG_DEBUG(DZY_LOG_ROOT()) << "float-before: "<<g_float->getVal();
     //DZY_LOG_DEBUG(DZY_LOG_ROOT()) << "vec-before: "<<g_vec->toString();
@@ -38,5 +39,23 @@ int main(){
     for(auto i :map){
          DZY_LOG_DEBUG(DZY_LOG_ROOT()) <<"after-" <<i.first<< "---"<<i.second;
     }
+
+
+}
+void test_conf(){
+    auto i = g_person->getVal();
+    for(auto it : i){
+        DZY_LOG_DEBUG(DZY_LOG_ROOT()) << it.m_name<<"---"<<it.m_age ;
+    }
+}
+
+
+int main(){
+   auto i = g_person->getVal();
+    for(auto it : i){
+        DZY_LOG_DEBUG(DZY_LOG_ROOT()) << it.m_name<<"---"<<it.m_age ;}
+    test_log();
+    test_conf();
+
     return 0;
 }

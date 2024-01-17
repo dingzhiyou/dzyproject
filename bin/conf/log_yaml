@@ -20,3 +20,8 @@ dzy:
     dzymap:
         map1: 4
         map2: 5
+    person:
+        - m_name: "i am dzy"
+          m_age: 24
+        - m_name: "i am a boy"
+          m_age: 25
