@@ -1,5 +1,8 @@
 #ifndef DZY_LOG_H__
 #define DZY_LOG_H__
+
+
+
 #include <iostream>
 #include <fstream>
 #include <ostream>
@@ -11,9 +14,8 @@
 #include <vector>
 #include <chrono>
 #include <ctime>
-#include "util.h"
 #include "singleton.h"
-
+#include "util.h"
 #define DZY_LOG_LEVEL(logger,level) \
     if(logger->getLevel() <= level) \
       dzy::LogEventWarp(dzy::LogEvent::ptr(new dzy::LogEvent(__FILE__,__LINE__,dzy::Gettid(),dzy::GetFiberId(),time(0),logger,level))).getSS()

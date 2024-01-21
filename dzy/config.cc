@@ -80,6 +80,6 @@ Log_init::Log_init(){
 }
 
 
-Log_init log_init;
+//Log_init log_init;
 
 }

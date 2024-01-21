@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/dada/project/dzy/thread.h
+iterator
+-
 memory
 -
 functional
@@ -18,6 +20,10 @@ sys/types.h
 unistd.h
 -
 stdio.h
+-
+semaphore.h
+-
+iostream
 -
 
 /home/dada/project/tests/test_thread.cc

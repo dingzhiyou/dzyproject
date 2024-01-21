@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_mutex
+
+# Build rule for target.
+test_mutex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_mutex
+.PHONY : test_mutex
+
+# fast build rule for target.
+test_mutex/fast:
+	$(MAKE) -f CMakeFiles/test_mutex.dir/build.make CMakeFiles/test_mutex.dir/build
+.PHONY : test_mutex/fast
+
+#=============================================================================
 # Target rules for targets named test_config_log
 
 # Build rule for target.
@@ -138,6 +151,32 @@ test_config: cmake_check_build_system
 test_config/fast:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
 .PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named test_backtrace
+
+# Build rule for target.
+test_backtrace: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_backtrace
+.PHONY : test_backtrace
+
+# fast build rule for target.
+test_backtrace/fast:
+	$(MAKE) -f CMakeFiles/test_backtrace.dir/build.make CMakeFiles/test_backtrace.dir/build
+.PHONY : test_backtrace/fast
 
 #=============================================================================
 # Target rules for targets named test_thread
@@ -204,6 +243,33 @@ dzy/config.s: dzy/config.cc.s
 dzy/config.cc.s:
 	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/config.cc.s
 .PHONY : dzy/config.cc.s
+
+dzy/fiber.o: dzy/fiber.cc.o
+
+.PHONY : dzy/fiber.o
+
+# target to build an object file
+dzy/fiber.cc.o:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/fiber.cc.o
+.PHONY : dzy/fiber.cc.o
+
+dzy/fiber.i: dzy/fiber.cc.i
+
+.PHONY : dzy/fiber.i
+
+# target to preprocess a source file
+dzy/fiber.cc.i:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/fiber.cc.i
+.PHONY : dzy/fiber.cc.i
+
+dzy/fiber.s: dzy/fiber.cc.s
+
+.PHONY : dzy/fiber.s
+
+# target to generate assembly for a file
+dzy/fiber.cc.s:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/fiber.cc.s
+.PHONY : dzy/fiber.cc.s
 
 dzy/log.o: dzy/log.cc.o
 
@@ -313,6 +379,33 @@ tests/test.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
 
+tests/test_backtrace.o: tests/test_backtrace.cc.o
+
+.PHONY : tests/test_backtrace.o
+
+# target to build an object file
+tests/test_backtrace.cc.o:
+	$(MAKE) -f CMakeFiles/test_backtrace.dir/build.make CMakeFiles/test_backtrace.dir/tests/test_backtrace.cc.o
+.PHONY : tests/test_backtrace.cc.o
+
+tests/test_backtrace.i: tests/test_backtrace.cc.i
+
+.PHONY : tests/test_backtrace.i
+
+# target to preprocess a source file
+tests/test_backtrace.cc.i:
+	$(MAKE) -f CMakeFiles/test_backtrace.dir/build.make CMakeFiles/test_backtrace.dir/tests/test_backtrace.cc.i
+.PHONY : tests/test_backtrace.cc.i
+
+tests/test_backtrace.s: tests/test_backtrace.cc.s
+
+.PHONY : tests/test_backtrace.s
+
+# target to generate assembly for a file
+tests/test_backtrace.cc.s:
+	$(MAKE) -f CMakeFiles/test_backtrace.dir/build.make CMakeFiles/test_backtrace.dir/tests/test_backtrace.cc.s
+.PHONY : tests/test_backtrace.cc.s
+
 tests/test_config.o: tests/test_config.cc.o
 
 .PHONY : tests/test_config.o
@@ -367,6 +460,60 @@ tests/test_config_log.cc.s:
 	$(MAKE) -f CMakeFiles/test_config_log.dir/build.make CMakeFiles/test_config_log.dir/tests/test_config_log.cc.s
 .PHONY : tests/test_config_log.cc.s
 
+tests/test_fiber.o: tests/test_fiber.cc.o
+
+.PHONY : tests/test_fiber.o
+
+# target to build an object file
+tests/test_fiber.cc.o:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
+.PHONY : tests/test_fiber.cc.o
+
+tests/test_fiber.i: tests/test_fiber.cc.i
+
+.PHONY : tests/test_fiber.i
+
+# target to preprocess a source file
+tests/test_fiber.cc.i:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i
+.PHONY : tests/test_fiber.cc.i
+
+tests/test_fiber.s: tests/test_fiber.cc.s
+
+.PHONY : tests/test_fiber.s
+
+# target to generate assembly for a file
+tests/test_fiber.cc.s:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
+.PHONY : tests/test_fiber.cc.s
+
+tests/test_mutex.o: tests/test_mutex.cc.o
+
+.PHONY : tests/test_mutex.o
+
+# target to build an object file
+tests/test_mutex.cc.o:
+	$(MAKE) -f CMakeFiles/test_mutex.dir/build.make CMakeFiles/test_mutex.dir/tests/test_mutex.cc.o
+.PHONY : tests/test_mutex.cc.o
+
+tests/test_mutex.i: tests/test_mutex.cc.i
+
+.PHONY : tests/test_mutex.i
+
+# target to preprocess a source file
+tests/test_mutex.cc.i:
+	$(MAKE) -f CMakeFiles/test_mutex.dir/build.make CMakeFiles/test_mutex.dir/tests/test_mutex.cc.i
+.PHONY : tests/test_mutex.cc.i
+
+tests/test_mutex.s: tests/test_mutex.cc.s
+
+.PHONY : tests/test_mutex.s
+
+# target to generate assembly for a file
+tests/test_mutex.cc.s:
+	$(MAKE) -f CMakeFiles/test_mutex.dir/build.make CMakeFiles/test_mutex.dir/tests/test_mutex.cc.s
+.PHONY : tests/test_mutex.cc.s
+
 tests/test_thread.o: tests/test_thread.cc.o
 
 .PHONY : tests/test_thread.o
@@ -401,8 +548,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_mutex"
 	@echo "... test_config_log"
 	@echo "... test_config"
+	@echo "... test_fiber"
+	@echo "... test_backtrace"
 	@echo "... edit_cache"
 	@echo "... test_thread"
 	@echo "... test"
@@ -410,6 +560,9 @@ help:
 	@echo "... dzy/config.o"
 	@echo "... dzy/config.i"
 	@echo "... dzy/config.s"
+	@echo "... dzy/fiber.o"
+	@echo "... dzy/fiber.i"
+	@echo "... dzy/fiber.s"
 	@echo "... dzy/log.o"
 	@echo "... dzy/log.i"
 	@echo "... dzy/log.s"
@@ -422,12 +575,21 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_backtrace.o"
+	@echo "... tests/test_backtrace.i"
+	@echo "... tests/test_backtrace.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
 	@echo "... tests/test_config_log.o"
 	@echo "... tests/test_config_log.i"
 	@echo "... tests/test_config_log.s"
+	@echo "... tests/test_fiber.o"
+	@echo "... tests/test_fiber.i"
+	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_mutex.o"
+	@echo "... tests/test_mutex.i"
+	@echo "... tests/test_mutex.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

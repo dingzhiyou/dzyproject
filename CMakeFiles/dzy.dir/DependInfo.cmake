@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dada/project/dzy/config.cc" "/home/dada/project/CMakeFiles/dzy.dir/dzy/config.cc.o"
+  "/home/dada/project/dzy/fiber.cc" "/home/dada/project/CMakeFiles/dzy.dir/dzy/fiber.cc.o"
   "/home/dada/project/dzy/log.cc" "/home/dada/project/CMakeFiles/dzy.dir/dzy/log.cc.o"
   "/home/dada/project/dzy/thread.cc" "/home/dada/project/CMakeFiles/dzy.dir/dzy/thread.cc.o"
   "/home/dada/project/dzy/util.cc" "/home/dada/project/CMakeFiles/dzy.dir/dzy/util.cc.o"

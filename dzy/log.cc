@@ -54,7 +54,7 @@ const LogLevel::Level LogLevel::ToLevel(std::string& str){
 }
 
 Logger::Logger(const std::string& name):m_name(name){
-    m_formatter.reset(new LoggerFormater("%d%T[%p]%T%f:%l%T%c%T%t%T%m \n"));
+    m_formatter.reset(new LoggerFormater("%d%T[%p]%T%f:%l%T%F%T%c%T%t%T%m \n"));
 }
 void Logger::addAppener(LoggerAppender::ptr appender){
     if(!appender->getFormatter()){
@@ -280,7 +280,7 @@ void LoggerFormater::init()
 
 
 LogManager::LogManager(){
-        auto logger = Logger::ptr(new Logger("dzy"));
+        auto logger = Logger::ptr(new Logger("root"));
         logger->addAppener(LoggerAppender::ptr(new StdoutAppender()));
         m_loggers.insert(std::make_pair("root",logger));
 }
