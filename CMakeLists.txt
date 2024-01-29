@@ -11,6 +11,7 @@ set (LIB_SRC
     dzy/util.cc
     dzy/thread.cc
     dzy/fiber.cc
+    dzy/schedule.cc
     )
 
 set(LIB_LIB 
@@ -58,6 +59,11 @@ target_link_libraries(test_thread ${LIB_LIB})
 add_executable(test_mutex tests/test_mutex.cc)
 add_dependencies(test_mutex dzy)
 target_link_libraries(test_mutex ${LIB_LIB})
+
+
+add_executable(test_schedule tests/test_schedule.cc)
+add_dependencies(test_schedule dzy)
+target_link_libraries(test_schedule  ${LIB_LIB})
 
 
 

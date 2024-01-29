@@ -99,8 +99,6 @@ int Mutex::lock(){
 void Mutex::unlock(){
     int ret = pthread_mutex_unlock(&m_mutex);
     if(ret == 0){
-        std::cout<<"OK"<<std::endl;
-
     }
 }
 RWMutex::RWMutex(){

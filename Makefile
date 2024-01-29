@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_schedule
+
+# Build rule for target.
+test_schedule: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_schedule
+.PHONY : test_schedule
+
+# fast build rule for target.
+test_schedule/fast:
+	$(MAKE) -f CMakeFiles/test_schedule.dir/build.make CMakeFiles/test_schedule.dir/build
+.PHONY : test_schedule/fast
+
+#=============================================================================
 # Target rules for targets named test_mutex
 
 # Build rule for target.
@@ -297,6 +310,33 @@ dzy/log.s: dzy/log.cc.s
 dzy/log.cc.s:
 	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/log.cc.s
 .PHONY : dzy/log.cc.s
+
+dzy/schedule.o: dzy/schedule.cc.o
+
+.PHONY : dzy/schedule.o
+
+# target to build an object file
+dzy/schedule.cc.o:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/schedule.cc.o
+.PHONY : dzy/schedule.cc.o
+
+dzy/schedule.i: dzy/schedule.cc.i
+
+.PHONY : dzy/schedule.i
+
+# target to preprocess a source file
+dzy/schedule.cc.i:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/schedule.cc.i
+.PHONY : dzy/schedule.cc.i
+
+dzy/schedule.s: dzy/schedule.cc.s
+
+.PHONY : dzy/schedule.s
+
+# target to generate assembly for a file
+dzy/schedule.cc.s:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/schedule.cc.s
+.PHONY : dzy/schedule.cc.s
 
 dzy/thread.o: dzy/thread.cc.o
 
@@ -514,6 +554,33 @@ tests/test_mutex.cc.s:
 	$(MAKE) -f CMakeFiles/test_mutex.dir/build.make CMakeFiles/test_mutex.dir/tests/test_mutex.cc.s
 .PHONY : tests/test_mutex.cc.s
 
+tests/test_schedule.o: tests/test_schedule.cc.o
+
+.PHONY : tests/test_schedule.o
+
+# target to build an object file
+tests/test_schedule.cc.o:
+	$(MAKE) -f CMakeFiles/test_schedule.dir/build.make CMakeFiles/test_schedule.dir/tests/test_schedule.cc.o
+.PHONY : tests/test_schedule.cc.o
+
+tests/test_schedule.i: tests/test_schedule.cc.i
+
+.PHONY : tests/test_schedule.i
+
+# target to preprocess a source file
+tests/test_schedule.cc.i:
+	$(MAKE) -f CMakeFiles/test_schedule.dir/build.make CMakeFiles/test_schedule.dir/tests/test_schedule.cc.i
+.PHONY : tests/test_schedule.cc.i
+
+tests/test_schedule.s: tests/test_schedule.cc.s
+
+.PHONY : tests/test_schedule.s
+
+# target to generate assembly for a file
+tests/test_schedule.cc.s:
+	$(MAKE) -f CMakeFiles/test_schedule.dir/build.make CMakeFiles/test_schedule.dir/tests/test_schedule.cc.s
+.PHONY : tests/test_schedule.cc.s
+
 tests/test_thread.o: tests/test_thread.cc.o
 
 .PHONY : tests/test_thread.o
@@ -548,6 +615,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_schedule"
 	@echo "... test_mutex"
 	@echo "... test_config_log"
 	@echo "... test_config"
@@ -566,6 +634,9 @@ help:
 	@echo "... dzy/log.o"
 	@echo "... dzy/log.i"
 	@echo "... dzy/log.s"
+	@echo "... dzy/schedule.o"
+	@echo "... dzy/schedule.i"
+	@echo "... dzy/schedule.s"
 	@echo "... dzy/thread.o"
 	@echo "... dzy/thread.i"
 	@echo "... dzy/thread.s"
@@ -590,6 +661,9 @@ help:
 	@echo "... tests/test_mutex.o"
 	@echo "... tests/test_mutex.i"
 	@echo "... tests/test_mutex.s"
+	@echo "... tests/test_schedule.o"
+	@echo "... tests/test_schedule.i"
+	@echo "... tests/test_schedule.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

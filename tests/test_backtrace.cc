@@ -1,5 +1,6 @@
 #include "../dzy/util.h"
 #include "../dzy/log.h"
+#include "../dzy/macro.h"
 
 
 void func(){

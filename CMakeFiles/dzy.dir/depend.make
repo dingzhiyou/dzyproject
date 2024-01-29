@@ -11,7 +11,10 @@ CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/config.h
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/fiber.cc
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/fiber.h
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/log.h
+CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/macro.h
+CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/schedule.h
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/singleton.h
+CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/thread.h
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/util.h
 
 CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/log.cc
@@ -19,12 +22,23 @@ CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/log.h
 CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/singleton.h
 CMakeFiles/dzy.dir/dzy/log.cc.o: dzy/util.h
 
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/config.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/fiber.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/log.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/macro.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/schedule.cc
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/schedule.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/singleton.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/thread.h
+CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/util.h
+
 CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/log.h
 CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/singleton.h
 CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/thread.cc
 CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/thread.h
 CMakeFiles/dzy.dir/dzy/thread.cc.o: dzy/util.h
 
+CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/config.h
 CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/fiber.h
 CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/log.h
 CMakeFiles/dzy.dir/dzy/util.cc.o: dzy/singleton.h

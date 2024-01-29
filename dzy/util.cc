@@ -1,7 +1,6 @@
 #include "util.h"
 #include "log.h"
 #include "fiber.h"
-
 namespace dzy{
 
 pid_t Gettid(){

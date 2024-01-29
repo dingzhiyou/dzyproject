@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dzy.dir/dzy/config.cc.o"
   "CMakeFiles/dzy.dir/dzy/fiber.cc.o"
   "CMakeFiles/dzy.dir/dzy/log.cc.o"
+  "CMakeFiles/dzy.dir/dzy/schedule.cc.o"
   "CMakeFiles/dzy.dir/dzy/thread.cc.o"
   "CMakeFiles/dzy.dir/dzy/util.cc.o"
   "lib/libdzy.pdb"

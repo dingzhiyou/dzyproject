@@ -1,4 +1,5 @@
 /home/dada/project/CMakeFiles/rebuild_cache.dir
+/home/dada/project/CMakeFiles/test_schedule.dir
 /home/dada/project/CMakeFiles/test_mutex.dir
 /home/dada/project/CMakeFiles/test_config_log.dir
 /home/dada/project/CMakeFiles/test_config.dir

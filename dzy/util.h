@@ -11,20 +11,10 @@
 #include <execinfo.h>
 #include <vector>
 
+
+
+
 namespace dzy{
-#define DZY_ASSERT(x) \
-    if(!(x)){  \
-    DZY_LOG_ERROR(DZY_LOG_ROOT()) << "ASSERT: "<<#x << "\nbacktrace\n" \
-        << dzy::BacktraceTostring(100); \
-}
-#define DZY_ASSERT2(x,w) \
-    if(!(x)){  \
-    DZY_LOG_ERROR(DZY_LOG_ROOT()) << "ASSERT: "<<#x <<"\n"<<"info:"<<#w "\nbacktrace\n" \
-        << dzy::BacktraceTostring(100); \
-}
-
-
-
 
 pid_t Gettid();
 uint32_t GetFiberId();
