@@ -86,7 +86,7 @@ size_t HttpRequestParser::execute(char *data, size_t len) {
     return offset;
 }
 int HttpRequestParser::isFinished(){
-    return http_parser_finish(&m_parser);
+    return http_parser_is_finished(&m_parser);
 }
 HttpRequest::ptr HttpRequestParser::getData() {
     return m_data;

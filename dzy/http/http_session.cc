@@ -17,7 +17,7 @@ HttpSession::~HttpSession(){
 }
 HttpRequest::ptr HttpSession::recvRequest(){
     HttpRequestParser::ptr parser(new HttpRequestParser);
-    size_t buff_len = 1024 * 1024;
+    size_t buff_len = 1024 * 1024 * 4;
     std::shared_ptr<char> buff(new char[buff_len],[](char* ptr){
         delete[] ptr;
     });
@@ -25,6 +25,7 @@ HttpRequest::ptr HttpSession::recvRequest(){
     char* buf = buff.get();
     size_t offset = 0;
     do{
+        DZY_LOG_INFO(g_logger) << "in recvRequest";
         int n  = read(buf + offset, buff_len - offset);
         if(n == 0){
             DZY_LOG_INFO(g_logger) <<"client disconnet";
@@ -33,7 +34,10 @@ HttpRequest::ptr HttpSession::recvRequest(){
             DZY_LOG_INFO(g_logger) <<"client read error, errno="<<errno <<"  errstr="<<strerror(errno);
             return nullptr;
         }
+        offset += n;
+        DZY_LOG_INFO(g_logger) <<"read="<<n<<"  data="<<std::string(buf,offset);
         int nparser = parser->execute(buf, offset);
+        DZY_LOG_INFO(g_logger) << "execute="<<nparser;
         offset -= nparser;
         if(parser->hasError()){
             DZY_LOG_INFO(g_logger) <<"parser->execute has error,errno="<<errno 
@@ -41,6 +45,7 @@ HttpRequest::ptr HttpSession::recvRequest(){
             return nullptr;
         }
         if(parser->isFinished()){
+            DZY_LOG_INFO(g_logger) << "isFinished()";
             break;
         }
     }while(true);

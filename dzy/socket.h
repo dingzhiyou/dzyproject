@@ -45,14 +45,14 @@ public:
     int listen(int backlog = 5000);
     int close();
 
-    ssize_t recv(void *buf, size_t len, int flags);
-    ssize_t recv(struct iovec* buf, size_t len, int flags);
-    ssize_t recvfrom(void *buf, size_t len, Addreess::ptr addr,int flags);
+    ssize_t recv(void *buf, size_t len, int flags = 0);
+    ssize_t recv(struct iovec* buf, size_t len, int flags = 0);
+    ssize_t recvfrom(void *buf, size_t len, Addreess::ptr addr,int flags = 0);
     //ssize_t recvfrom(struct iovec* buf, size_t len, Addreess::ptr addr,int flags);
 
-    ssize_t send(void *buf, size_t len, int flags);
-    ssize_t send(struct iovec* buf, size_t len, int flags);
-    ssize_t sendto(void *buf, size_t len, Addreess::ptr addr,int flags);
+    ssize_t send(void *buf, size_t len, int flags = 0);
+    ssize_t send(struct iovec* buf, size_t len, int flags = 0);
+    ssize_t sendto(void *buf, size_t len, Addreess::ptr addr,int flags = 0);
     //ssize_t sendto(struct iovec* buf, size_t len, Addreess::ptr addr,int flags);
 
     Addreess::ptr getRemoteAddress();
