@@ -1,1 +1,1 @@
-g++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_schedule.dir/tests/test_schedule.cc.o  -o bin/test_schedule  -Wl,-rpath,/home/dada/project/lib lib/libdzy.so -lpthread -lyaml-cpp 
+g++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_schedule.dir/tests/test_schedule.cc.o  -o bin/test_schedule  -Wl,-rpath,/home/dada/project/lib lib/libdzy.so -lpthread -lyaml-cpp -ldl 

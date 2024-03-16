@@ -129,7 +129,6 @@ void RWMutex::wrlock(){
 void RWMutex::unlock(){
     while(true){
         if(!pthread_rwlock_unlock(&m_mutex)){
-            std::cout<<"1"<<std::endl;
             return;
         }
     }

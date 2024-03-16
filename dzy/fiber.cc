@@ -1,5 +1,6 @@
 #include "fiber.h"
 #include <atomic>
+#include <bits/stdint-uintn.h>
 #include <cerrno>
 #include <exception>
 #include <functional>
@@ -17,8 +18,8 @@ extern thread_local Fiber::ptr t_schedule_fiber;
 static std::atomic<uint64_t> s_fiber_id{0};
 static std::atomic<uint64_t> s_fiber_count{0};
 
-static thread_local Fiber* t_fiber = nullptr;
-static thread_local Fiber::ptr t_threadFiber = nullptr;
+static thread_local Fiber* t_fiber = nullptr; //当前正在执行的协程
+static thread_local Fiber::ptr t_threadFiber = nullptr;//线程的主协程
 
 
 class MallocStackSize {
@@ -31,8 +32,12 @@ public:
         free(vp);
     }
 };
-
+uint64_t Fiber::getId(){
+    return m_id;
+}
 Fiber::Fiber(std::function<void()> cb,uint32_t stacksize,bool use_caller):m_cb(cb),m_id(++s_fiber_id),m_use_caller(use_caller){
+
+        DZY_LOG_DEBUG(DZY_LOG_ROOT()) <<"fiberId: "<<m_id;
         ++s_fiber_count;
         m_state = INIT;
         m_stacksize =  stacksize == 0 ?  g_fiber_stacksize->getVal() : stacksize;
@@ -51,12 +56,11 @@ Fiber::Fiber(std::function<void()> cb,uint32_t stacksize,bool use_caller):m_cb(c
         }
 }
 Fiber::~Fiber(){
+    //DZY_LOG_DEBUG(DZY_LOG_ROOT()) <<"~fiberId: "<<m_id;
     --s_fiber_count;
     if(m_stack){
         if(m_state == Fiber::HOLD){
-            std::cout<<"--------"<<m_id<<std::endl;
         }
-        std::cout<<"m_id:"<<m_id<<std::endl;
         DZY_ASSERT2(m_state == INIT || m_state == TEAM,std::to_string(m_id));
         MallocStackSize::Dealloc(m_stack, m_stacksize);
         m_stack = nullptr;
@@ -80,7 +84,7 @@ void Fiber::swapIn(){
     }
 }
 void Fiber::swapOut(){
-    SetThis(t_threadFiber.get());
+    SetThis(Schedule::GetMainFiber().get());
     if(swapcontext(&m_ctx,&(Schedule::GetMainFiber().get()->m_ctx))){
         DZY_ASSERT2(false, "swapcontext error");
     }
@@ -119,11 +123,7 @@ void Fiber::YieldToReady(){
 
     Fiber* cur = GetThis().get();
     cur->m_state = READY;
-    if(cur->m_use_caller){
-        cur->callOut();
-    }else{
-        cur->swapOut();
-    }
+    cur->swapOut();
 }
 Fiber::ptr Fiber::GetThis(){
         if(!t_threadFiber){

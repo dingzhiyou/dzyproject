@@ -125,9 +125,22 @@ CMakeFiles/dzy.dir/dzy/fiber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/fiber.cc.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/fiber.cc -o CMakeFiles/dzy.dir/dzy/fiber.cc.s
 
+CMakeFiles/dzy.dir/dzy/fd_manager.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/fd_manager.cc.o: dzy/fd_manager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/dzy.dir/dzy/fd_manager.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/fd_manager.cc.o -c /home/dada/project/dzy/fd_manager.cc
+
+CMakeFiles/dzy.dir/dzy/fd_manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/fd_manager.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/fd_manager.cc > CMakeFiles/dzy.dir/dzy/fd_manager.cc.i
+
+CMakeFiles/dzy.dir/dzy/fd_manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/fd_manager.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/fd_manager.cc -o CMakeFiles/dzy.dir/dzy/fd_manager.cc.s
+
 CMakeFiles/dzy.dir/dzy/schedule.cc.o: CMakeFiles/dzy.dir/flags.make
 CMakeFiles/dzy.dir/dzy/schedule.cc.o: dzy/schedule.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/dzy.dir/dzy/schedule.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/dzy.dir/dzy/schedule.cc.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/schedule.cc.o -c /home/dada/project/dzy/schedule.cc
 
 CMakeFiles/dzy.dir/dzy/schedule.cc.i: cmake_force
@@ -138,6 +151,188 @@ CMakeFiles/dzy.dir/dzy/schedule.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/schedule.cc.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/schedule.cc -o CMakeFiles/dzy.dir/dzy/schedule.cc.s
 
+CMakeFiles/dzy.dir/dzy/iomanager.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/iomanager.cc.o: dzy/iomanager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/dzy.dir/dzy/iomanager.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/iomanager.cc.o -c /home/dada/project/dzy/iomanager.cc
+
+CMakeFiles/dzy.dir/dzy/iomanager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/iomanager.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/iomanager.cc > CMakeFiles/dzy.dir/dzy/iomanager.cc.i
+
+CMakeFiles/dzy.dir/dzy/iomanager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/iomanager.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/iomanager.cc -o CMakeFiles/dzy.dir/dzy/iomanager.cc.s
+
+CMakeFiles/dzy.dir/dzy/timer.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/timer.cc.o: dzy/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/dzy.dir/dzy/timer.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/timer.cc.o -c /home/dada/project/dzy/timer.cc
+
+CMakeFiles/dzy.dir/dzy/timer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/timer.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/timer.cc > CMakeFiles/dzy.dir/dzy/timer.cc.i
+
+CMakeFiles/dzy.dir/dzy/timer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/timer.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/timer.cc -o CMakeFiles/dzy.dir/dzy/timer.cc.s
+
+CMakeFiles/dzy.dir/dzy/hook.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/hook.cc.o: dzy/hook.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/dzy.dir/dzy/hook.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/hook.cc.o -c /home/dada/project/dzy/hook.cc
+
+CMakeFiles/dzy.dir/dzy/hook.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/hook.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/hook.cc > CMakeFiles/dzy.dir/dzy/hook.cc.i
+
+CMakeFiles/dzy.dir/dzy/hook.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/hook.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/hook.cc -o CMakeFiles/dzy.dir/dzy/hook.cc.s
+
+CMakeFiles/dzy.dir/dzy/addr.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/addr.cc.o: dzy/addr.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/dzy.dir/dzy/addr.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/addr.cc.o -c /home/dada/project/dzy/addr.cc
+
+CMakeFiles/dzy.dir/dzy/addr.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/addr.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/addr.cc > CMakeFiles/dzy.dir/dzy/addr.cc.i
+
+CMakeFiles/dzy.dir/dzy/addr.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/addr.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/addr.cc -o CMakeFiles/dzy.dir/dzy/addr.cc.s
+
+CMakeFiles/dzy.dir/dzy/socket.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/socket.cc.o: dzy/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/dzy.dir/dzy/socket.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/socket.cc.o -c /home/dada/project/dzy/socket.cc
+
+CMakeFiles/dzy.dir/dzy/socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/socket.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/socket.cc > CMakeFiles/dzy.dir/dzy/socket.cc.i
+
+CMakeFiles/dzy.dir/dzy/socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/socket.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/socket.cc -o CMakeFiles/dzy.dir/dzy/socket.cc.s
+
+CMakeFiles/dzy.dir/dzy/sockstream.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/sockstream.cc.o: dzy/sockstream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/dzy.dir/dzy/sockstream.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/sockstream.cc.o -c /home/dada/project/dzy/sockstream.cc
+
+CMakeFiles/dzy.dir/dzy/sockstream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/sockstream.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/sockstream.cc > CMakeFiles/dzy.dir/dzy/sockstream.cc.i
+
+CMakeFiles/dzy.dir/dzy/sockstream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/sockstream.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/sockstream.cc -o CMakeFiles/dzy.dir/dzy/sockstream.cc.s
+
+CMakeFiles/dzy.dir/dzy/bytearray.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/bytearray.cc.o: dzy/bytearray.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/dzy.dir/dzy/bytearray.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/bytearray.cc.o -c /home/dada/project/dzy/bytearray.cc
+
+CMakeFiles/dzy.dir/dzy/bytearray.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/bytearray.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/bytearray.cc > CMakeFiles/dzy.dir/dzy/bytearray.cc.i
+
+CMakeFiles/dzy.dir/dzy/bytearray.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/bytearray.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/bytearray.cc -o CMakeFiles/dzy.dir/dzy/bytearray.cc.s
+
+CMakeFiles/dzy.dir/dzy/http/http.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/http/http.cc.o: dzy/http/http.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/dzy.dir/dzy/http/http.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/http/http.cc.o -c /home/dada/project/dzy/http/http.cc
+
+CMakeFiles/dzy.dir/dzy/http/http.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/http/http.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/http/http.cc > CMakeFiles/dzy.dir/dzy/http/http.cc.i
+
+CMakeFiles/dzy.dir/dzy/http/http.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/http/http.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/http/http.cc -o CMakeFiles/dzy.dir/dzy/http/http.cc.s
+
+CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.o: dzy/http/http11_parser.rl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.o -c /home/dada/project/dzy/http/http11_parser.rl.cc
+
+CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/http/http11_parser.rl.cc > CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.i
+
+CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/http/http11_parser.rl.cc -o CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.s
+
+CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o: dzy/http/httpclient_parser.rl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o -c /home/dada/project/dzy/http/httpclient_parser.rl.cc
+
+CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/http/httpclient_parser.rl.cc > CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.i
+
+CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/http/httpclient_parser.rl.cc -o CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.s
+
+CMakeFiles/dzy.dir/dzy/http/http_parser.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/http/http_parser.cc.o: dzy/http/http_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/dzy.dir/dzy/http/http_parser.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/http/http_parser.cc.o -c /home/dada/project/dzy/http/http_parser.cc
+
+CMakeFiles/dzy.dir/dzy/http/http_parser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/http/http_parser.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/http/http_parser.cc > CMakeFiles/dzy.dir/dzy/http/http_parser.cc.i
+
+CMakeFiles/dzy.dir/dzy/http/http_parser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/http/http_parser.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/http/http_parser.cc -o CMakeFiles/dzy.dir/dzy/http/http_parser.cc.s
+
+CMakeFiles/dzy.dir/dzy/http/http_session.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/http/http_session.cc.o: dzy/http/http_session.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/dzy.dir/dzy/http/http_session.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/http/http_session.cc.o -c /home/dada/project/dzy/http/http_session.cc
+
+CMakeFiles/dzy.dir/dzy/http/http_session.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/http/http_session.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/http/http_session.cc > CMakeFiles/dzy.dir/dzy/http/http_session.cc.i
+
+CMakeFiles/dzy.dir/dzy/http/http_session.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/http/http_session.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/http/http_session.cc -o CMakeFiles/dzy.dir/dzy/http/http_session.cc.s
+
+CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/http/http_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/dzy.dir/dzy/http/http_server.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/http/http_server.cc.o -c /home/dada/project/dzy/http/http_server.cc
+
+CMakeFiles/dzy.dir/dzy/http/http_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/http/http_server.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/http/http_server.cc > CMakeFiles/dzy.dir/dzy/http/http_server.cc.i
+
+CMakeFiles/dzy.dir/dzy/http/http_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/http/http_server.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/http/http_server.cc -o CMakeFiles/dzy.dir/dzy/http/http_server.cc.s
+
+CMakeFiles/dzy.dir/dzy/tcp_server.cc.o: CMakeFiles/dzy.dir/flags.make
+CMakeFiles/dzy.dir/dzy/tcp_server.cc.o: dzy/tcp_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/dzy.dir/dzy/tcp_server.cc.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dzy.dir/dzy/tcp_server.cc.o -c /home/dada/project/dzy/tcp_server.cc
+
+CMakeFiles/dzy.dir/dzy/tcp_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dzy.dir/dzy/tcp_server.cc.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dada/project/dzy/tcp_server.cc > CMakeFiles/dzy.dir/dzy/tcp_server.cc.i
+
+CMakeFiles/dzy.dir/dzy/tcp_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dzy.dir/dzy/tcp_server.cc.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dada/project/dzy/tcp_server.cc -o CMakeFiles/dzy.dir/dzy/tcp_server.cc.s
+
 # Object files for target dzy
 dzy_OBJECTS = \
 "CMakeFiles/dzy.dir/dzy/log.cc.o" \
@@ -145,7 +340,22 @@ dzy_OBJECTS = \
 "CMakeFiles/dzy.dir/dzy/util.cc.o" \
 "CMakeFiles/dzy.dir/dzy/thread.cc.o" \
 "CMakeFiles/dzy.dir/dzy/fiber.cc.o" \
-"CMakeFiles/dzy.dir/dzy/schedule.cc.o"
+"CMakeFiles/dzy.dir/dzy/fd_manager.cc.o" \
+"CMakeFiles/dzy.dir/dzy/schedule.cc.o" \
+"CMakeFiles/dzy.dir/dzy/iomanager.cc.o" \
+"CMakeFiles/dzy.dir/dzy/timer.cc.o" \
+"CMakeFiles/dzy.dir/dzy/hook.cc.o" \
+"CMakeFiles/dzy.dir/dzy/addr.cc.o" \
+"CMakeFiles/dzy.dir/dzy/socket.cc.o" \
+"CMakeFiles/dzy.dir/dzy/sockstream.cc.o" \
+"CMakeFiles/dzy.dir/dzy/bytearray.cc.o" \
+"CMakeFiles/dzy.dir/dzy/http/http.cc.o" \
+"CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.o" \
+"CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o" \
+"CMakeFiles/dzy.dir/dzy/http/http_parser.cc.o" \
+"CMakeFiles/dzy.dir/dzy/http/http_session.cc.o" \
+"CMakeFiles/dzy.dir/dzy/http/http_server.cc.o" \
+"CMakeFiles/dzy.dir/dzy/tcp_server.cc.o"
 
 # External object files for target dzy
 dzy_EXTERNAL_OBJECTS =
@@ -155,10 +365,25 @@ lib/libdzy.so: CMakeFiles/dzy.dir/dzy/config.cc.o
 lib/libdzy.so: CMakeFiles/dzy.dir/dzy/util.cc.o
 lib/libdzy.so: CMakeFiles/dzy.dir/dzy/thread.cc.o
 lib/libdzy.so: CMakeFiles/dzy.dir/dzy/fiber.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/fd_manager.cc.o
 lib/libdzy.so: CMakeFiles/dzy.dir/dzy/schedule.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/iomanager.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/timer.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/hook.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/addr.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/socket.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/sockstream.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/bytearray.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/http/http.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/http/http11_parser.rl.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/http/http_parser.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/http/http_session.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/http/http_server.cc.o
+lib/libdzy.so: CMakeFiles/dzy.dir/dzy/tcp_server.cc.o
 lib/libdzy.so: CMakeFiles/dzy.dir/build.make
 lib/libdzy.so: CMakeFiles/dzy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library lib/libdzy.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dada/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX shared library lib/libdzy.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dzy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

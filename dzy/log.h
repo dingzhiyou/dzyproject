@@ -281,6 +281,7 @@ public:
     }
 private:
     std::map<std::string ,Logger::ptr> m_loggers;
+    Logger::ptr m_root;
 };
 typedef Singleton<LogManager> LoggerMgr;
 

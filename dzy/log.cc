@@ -1,5 +1,6 @@
 #include "log.h"
 #include "util.h"
+#include <iostream>
 #include <iterator>
 #include <memory>
 #include <sstream>
@@ -283,6 +284,7 @@ LogManager::LogManager(){
         auto logger = Logger::ptr(new Logger("root"));
         logger->addAppener(LoggerAppender::ptr(new StdoutAppender()));
         m_loggers.insert(std::make_pair("root",logger));
+        m_root = logger;
 }
 Logger::ptr LogManager::GetLogger(const std::string& name){
     auto it = m_loggers.find(name);
@@ -290,24 +292,23 @@ Logger::ptr LogManager::GetLogger(const std::string& name){
         return it->second;
     }
     else {
-        auto root = GetLogger("root");
-        return root;
+        return m_root;
     }
 }
 
 Logger::ptr LogManager::GetRoot(){
-        auto root = GetLogger("root");
-        return root;
+        return m_root;
 }
 
-class Init {
-public:
-    Init(){
-        Singleton<LogManager>::GetInstance()->GetRoot();
-    }
-};
-Init init;
-
+//class Init {
+//public:
+//    Init(){
+//       // std::cout<<"log_init"<<std::endl;
+//        //Singleton<LogManager>::GetInstance()->GetRoot();
+//    }
+//};
+//static Init init;
+//
 
 }
 

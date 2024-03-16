@@ -1,0 +1,6 @@
+GET /home HTTP/1.1
+connect: close
+Content-length: 11
+Type: text
+
+i am dzyxxx

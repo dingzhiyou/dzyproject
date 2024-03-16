@@ -4,12 +4,15 @@
 #include <map>
 #include <atomic>
 #include <functional>
+#include "log.h"
 #include "thread.h"
 #include "fiber.h"
 #include <sched.h>
 #include <vector>
 #include <list>
+
 namespace dzy {
+
 static thread_local Fiber::ptr t_schedule_fiber = nullptr;
 class Schedule {
 public:
@@ -25,6 +28,7 @@ public:
 
     void start();
     void stop();
+    bool hasIdleFiber(){return m_idleFiberCount > 0;}
 
     template<class FiberOrCallback>
     void schedule(FiberOrCallback f,int thr = -1){
@@ -55,7 +59,6 @@ public:
             bool flag = m_fibers.empty();
             FiberAndThread fc(f,thr);
             if(fc.fiber || fc.cb){
-                std::cout<<"add fiber" <<std::endl;
                 m_fibers.push_back(fc);
             }
             return flag;
@@ -72,7 +75,7 @@ private:
     struct FiberAndThread {
         Fiber::ptr fiber;
         std::function<void()> cb;
-        int thread;
+        int thread = -1;
 
         FiberAndThread(Fiber::ptr f,int thr):fiber(f){
             thread = thr;

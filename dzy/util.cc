@@ -31,4 +31,21 @@ std::string BacktraceTostring(size_t size,size_t skip){
         }
         return ss.str();
 }
+
+uint64_t GetTimeMs(){
+    struct timeval tv;
+    gettimeofday(&tv, nullptr);
+    uint64_t t = 0;
+    t = tv.tv_sec * 1000 + tv.tv_usec / 1000;
+    return t;
+}
+uint64_t GetTimeUs(){
+    struct timeval tv;
+    gettimeofday(&tv, nullptr);
+    uint64_t t = 0;
+    t = tv.tv_sec * 1000 * 1000 + tv.tv_usec;
+    return t;
+}
+
+
 }

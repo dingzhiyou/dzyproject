@@ -5,7 +5,7 @@
 #include "util.h"
 #include "macro.h"
 #include "schedule.h"
-
+#include "hook.h"
 
 namespace dzy {
 //static thread_local Fiber::ptr t_schedule_fiber = nullptr;
@@ -63,7 +63,6 @@ void Schedule::idle(){
 }
 
 bool Schedule::stopping(){
-    std::cout<< "stopping"<<std::endl;
     return false;
 }
 void Schedule::stop(){
@@ -100,6 +99,7 @@ void Schedule::stop(){
 
 void Schedule::run(){
     Fiber::GetThis();
+    setHook(true);
     t_schedule_fiber = Fiber::GetThis();
     t_schedule = this;
     Fiber::ptr fiber;
@@ -126,13 +126,10 @@ void Schedule::run(){
             }
             if(i != m_fibers.end()){
                     ft.reset();
-                std::cout<<"i.thread:"<<i->thread<<std::endl;
                     ft = (*i);
                    m_fibers.erase(i);
-                std::cout<<"i.thread:"<<i->thread<<std::endl;
             }
         }
-
         if(ft.fiber && ft.fiber->getState() != Fiber::TEAM){
             ft.fiber->swapIn();
             if(ft.fiber->getState() == Fiber::READY){
@@ -153,7 +150,6 @@ void Schedule::run(){
             ft.reset();
         }else{
                 if(idle_fiber->getState() == Fiber::TEAM || idle_fiber->getState() == Fiber::EXCEP){
-                    std::cout<<"idle exit"<<std::endl;
                     break;
                 }
                 idle_fiber->swapIn();
@@ -164,12 +160,12 @@ void Schedule::run(){
 
 void Schedule::run_use(){
     Fiber::GetThis();
+    setHook(true);
     Fiber::ptr fiber;
     Fiber::ptr cb_fiber;
     FiberAndThread ft;
-    Fiber::ptr idle_fiber(new Fiber(std::bind(&Schedule::idle,this),g_fiber_stacksize->getVal()));
+    Fiber::ptr idle_fiber(new Fiber(std::bind(&Schedule::idle,this),g_fiber_stacksize->getVal(),true));
     while(true){
-        DZY_LOG_DEBUG(DZY_LOG_ROOT()) << "==========================";
         bool ticke_me = false;
         {
             MutexType::LockGuard lock(m_mutex);
@@ -189,11 +185,10 @@ void Schedule::run_use(){
             }
             if(i != m_fibers.end()){
                     ft.reset();
-                std::cout<<"i.thread:"<<i->thread<<std::endl;
                     ft = (*i);
-                   m_fibers.erase(i);
-                std::cout<<"i.thread:"<<i->thread<<std::endl;
+                    m_fibers.erase(i);
             }
+            lock.unlock();
         }
 
         if(ft.fiber && ft.fiber->getState() != Fiber::TEAM){
@@ -219,10 +214,16 @@ void Schedule::run_use(){
                     std::cout<<"idle exit"<<std::endl;
                     break;
                 }
+                m_idleFiberCount++;
                 idle_fiber->swapIn();
+                m_idleFiberCount--;
+                ft.reset();
         }
 
     }
+    DZY_ASSERT(false);
+    Fiber::GetThis()->callOut();
 }
+
 
 }

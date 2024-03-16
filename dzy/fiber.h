@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <functional>
+#include <sys/types.h>
 #include <sys/ucontext.h>
 #include <ucontext.h>
 #include "config.h"
@@ -30,6 +31,7 @@ public:
     void reset(std::function<void()> cb);
     void callIn();
     void callOut();
+    uint64_t getId();
     uint64_t getid(){return m_id;}
 
    private:
