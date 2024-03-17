@@ -36,6 +36,21 @@ CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/singleton.h
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/thread.h
 CMakeFiles/dzy.dir/dzy/fiber.cc.o: dzy/util.h
 
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/addr.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/config.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/fiber.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/ftp/ftp_server.cc
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/ftp/ftp_server.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/iomanager.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/log.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/schedule.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/singleton.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/socket.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/tcp_server.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/thread.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/timer.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o: dzy/util.h
+
 CMakeFiles/dzy.dir/dzy/hook.cc.o: dzy/config.h
 CMakeFiles/dzy.dir/dzy/hook.cc.o: dzy/fd_manager.h
 CMakeFiles/dzy.dir/dzy/hook.cc.o: dzy/fiber.h
@@ -73,6 +88,7 @@ CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/http/http.h
 CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/http/http_server.cc
 CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/http/http_server.h
 CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/http/http_session.h
+CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/http/servlet.h
 CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/iomanager.h
 CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/log.h
 CMakeFiles/dzy.dir/dzy/http/http_server.cc.o: dzy/schedule.h
@@ -101,6 +117,14 @@ CMakeFiles/dzy.dir/dzy/http/http_session.cc.o: dzy/util.h
 CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o: dzy/http/http11_common.h
 CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o: dzy/http/httpclient_parser.h
 CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o: dzy/http/httpclient_parser.rl.cc
+
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/addr.h
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/http/http.h
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/http/http_session.h
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/http/servlet.cc
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/http/servlet.h
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/socket.h
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o: dzy/sockstream.h
 
 CMakeFiles/dzy.dir/dzy/iomanager.cc.o: dzy/config.h
 CMakeFiles/dzy.dir/dzy/iomanager.cc.o: dzy/fiber.h

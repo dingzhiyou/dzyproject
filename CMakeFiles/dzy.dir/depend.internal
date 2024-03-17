@@ -36,6 +36,21 @@ CMakeFiles/dzy.dir/dzy/fiber.cc.o
  /home/dada/project/dzy/singleton.h
  /home/dada/project/dzy/thread.h
  /home/dada/project/dzy/util.h
+CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o
+ /home/dada/project/dzy/addr.h
+ /home/dada/project/dzy/config.h
+ /home/dada/project/dzy/fiber.h
+ /home/dada/project/dzy/ftp/ftp_server.cc
+ /home/dada/project/dzy/ftp/ftp_server.h
+ /home/dada/project/dzy/iomanager.h
+ /home/dada/project/dzy/log.h
+ /home/dada/project/dzy/schedule.h
+ /home/dada/project/dzy/singleton.h
+ /home/dada/project/dzy/socket.h
+ /home/dada/project/dzy/tcp_server.h
+ /home/dada/project/dzy/thread.h
+ /home/dada/project/dzy/timer.h
+ /home/dada/project/dzy/util.h
 CMakeFiles/dzy.dir/dzy/hook.cc.o
  /home/dada/project/dzy/config.h
  /home/dada/project/dzy/fd_manager.h
@@ -74,6 +89,7 @@ CMakeFiles/dzy.dir/dzy/http/http_server.cc.o
  /home/dada/project/dzy/http/http_server.cc
  /home/dada/project/dzy/http/http_server.h
  /home/dada/project/dzy/http/http_session.h
+ /home/dada/project/dzy/http/servlet.h
  /home/dada/project/dzy/iomanager.h
  /home/dada/project/dzy/log.h
  /home/dada/project/dzy/schedule.h
@@ -102,6 +118,14 @@ CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.o
  /home/dada/project/dzy/http/http11_common.h
  /home/dada/project/dzy/http/httpclient_parser.h
  /home/dada/project/dzy/http/httpclient_parser.rl.cc
+CMakeFiles/dzy.dir/dzy/http/servlet.cc.o
+ /home/dada/project/dzy/addr.h
+ /home/dada/project/dzy/http/http.h
+ /home/dada/project/dzy/http/http_session.h
+ /home/dada/project/dzy/http/servlet.cc
+ /home/dada/project/dzy/http/servlet.h
+ /home/dada/project/dzy/socket.h
+ /home/dada/project/dzy/sockstream.h
 CMakeFiles/dzy.dir/dzy/iomanager.cc.o
  /home/dada/project/dzy/config.h
  /home/dada/project/dzy/fiber.h

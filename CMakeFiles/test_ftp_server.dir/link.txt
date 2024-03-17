@@ -1,0 +1,1 @@
+g++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_ftp_server.dir/tests/test_ftp_server.cc.o  -o bin/test_ftp_server  -Wl,-rpath,/home/dada/project/lib lib/libdzy.so -lpthread -lyaml-cpp -ldl 

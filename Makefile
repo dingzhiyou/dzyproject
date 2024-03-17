@@ -166,6 +166,32 @@ test_mutex/fast:
 .PHONY : test_mutex/fast
 
 #=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named dzy
+
+# Build rule for target.
+dzy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dzy
+.PHONY : dzy
+
+# fast build rule for target.
+dzy/fast:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/build
+.PHONY : dzy/fast
+
+#=============================================================================
 # Target rules for targets named test_sock_client
 
 # Build rule for target.
@@ -231,43 +257,17 @@ test_config/fast:
 .PHONY : test_config/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named test_ftp_server
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+test_ftp_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_ftp_server
+.PHONY : test_ftp_server
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-#=============================================================================
-# Target rules for targets named dzy
-
-# Build rule for target.
-dzy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dzy
-.PHONY : dzy
-
-# fast build rule for target.
-dzy/fast:
-	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/build
-.PHONY : dzy/fast
-
-#=============================================================================
-# Target rules for targets named test_thread
-
-# Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
-
-# fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
+test_ftp_server/fast:
+	$(MAKE) -f CMakeFiles/test_ftp_server.dir/build.make CMakeFiles/test_ftp_server.dir/build
+.PHONY : test_ftp_server/fast
 
 #=============================================================================
 # Target rules for targets named test_hook
@@ -307,6 +307,19 @@ test_config_log: cmake_check_build_system
 test_config_log/fast:
 	$(MAKE) -f CMakeFiles/test_config_log.dir/build.make CMakeFiles/test_config_log.dir/build
 .PHONY : test_config_log/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
 # Target rules for targets named test_bytearray
@@ -494,6 +507,33 @@ dzy/fiber.s: dzy/fiber.cc.s
 dzy/fiber.cc.s:
 	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/fiber.cc.s
 .PHONY : dzy/fiber.cc.s
+
+dzy/ftp/ftp_server.o: dzy/ftp/ftp_server.cc.o
+
+.PHONY : dzy/ftp/ftp_server.o
+
+# target to build an object file
+dzy/ftp/ftp_server.cc.o:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.o
+.PHONY : dzy/ftp/ftp_server.cc.o
+
+dzy/ftp/ftp_server.i: dzy/ftp/ftp_server.cc.i
+
+.PHONY : dzy/ftp/ftp_server.i
+
+# target to preprocess a source file
+dzy/ftp/ftp_server.cc.i:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.i
+.PHONY : dzy/ftp/ftp_server.cc.i
+
+dzy/ftp/ftp_server.s: dzy/ftp/ftp_server.cc.s
+
+.PHONY : dzy/ftp/ftp_server.s
+
+# target to generate assembly for a file
+dzy/ftp/ftp_server.cc.s:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/ftp/ftp_server.cc.s
+.PHONY : dzy/ftp/ftp_server.cc.s
 
 dzy/hook.o: dzy/hook.cc.o
 
@@ -683,6 +723,33 @@ dzy/http/httpclient_parser.rl.s: dzy/http/httpclient_parser.rl.cc.s
 dzy/http/httpclient_parser.rl.cc.s:
 	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/http/httpclient_parser.rl.cc.s
 .PHONY : dzy/http/httpclient_parser.rl.cc.s
+
+dzy/http/servlet.o: dzy/http/servlet.cc.o
+
+.PHONY : dzy/http/servlet.o
+
+# target to build an object file
+dzy/http/servlet.cc.o:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/http/servlet.cc.o
+.PHONY : dzy/http/servlet.cc.o
+
+dzy/http/servlet.i: dzy/http/servlet.cc.i
+
+.PHONY : dzy/http/servlet.i
+
+# target to preprocess a source file
+dzy/http/servlet.cc.i:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/http/servlet.cc.i
+.PHONY : dzy/http/servlet.cc.i
+
+dzy/http/servlet.s: dzy/http/servlet.cc.s
+
+.PHONY : dzy/http/servlet.s
+
+# target to generate assembly for a file
+dzy/http/servlet.cc.s:
+	$(MAKE) -f CMakeFiles/dzy.dir/build.make CMakeFiles/dzy.dir/dzy/http/servlet.cc.s
+.PHONY : dzy/http/servlet.cc.s
 
 dzy/iomanager.o: dzy/iomanager.cc.o
 
@@ -1143,6 +1210,33 @@ tests/test_fiber.cc.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_ftp_server.o: tests/test_ftp_server.cc.o
+
+.PHONY : tests/test_ftp_server.o
+
+# target to build an object file
+tests/test_ftp_server.cc.o:
+	$(MAKE) -f CMakeFiles/test_ftp_server.dir/build.make CMakeFiles/test_ftp_server.dir/tests/test_ftp_server.cc.o
+.PHONY : tests/test_ftp_server.cc.o
+
+tests/test_ftp_server.i: tests/test_ftp_server.cc.i
+
+.PHONY : tests/test_ftp_server.i
+
+# target to preprocess a source file
+tests/test_ftp_server.cc.i:
+	$(MAKE) -f CMakeFiles/test_ftp_server.dir/build.make CMakeFiles/test_ftp_server.dir/tests/test_ftp_server.cc.i
+.PHONY : tests/test_ftp_server.cc.i
+
+tests/test_ftp_server.s: tests/test_ftp_server.cc.s
+
+.PHONY : tests/test_ftp_server.s
+
+# target to generate assembly for a file
+tests/test_ftp_server.cc.s:
+	$(MAKE) -f CMakeFiles/test_ftp_server.dir/build.make CMakeFiles/test_ftp_server.dir/tests/test_ftp_server.cc.s
+.PHONY : tests/test_ftp_server.cc.s
+
 tests/test_hook.o: tests/test_hook.cc.o
 
 .PHONY : tests/test_hook.o
@@ -1425,17 +1519,18 @@ help:
 	@echo "... test_http_server"
 	@echo "... test_http"
 	@echo "... test_mutex"
+	@echo "... test_thread"
+	@echo "... dzy"
 	@echo "... test_sock_client"
 	@echo "... test_http_parser"
 	@echo "... test_tcp_server"
 	@echo "... test_schedule"
 	@echo "... test_config"
-	@echo "... test"
-	@echo "... dzy"
-	@echo "... test_thread"
+	@echo "... test_ftp_server"
 	@echo "... test_hook"
 	@echo "... test_addr"
 	@echo "... test_config_log"
+	@echo "... test"
 	@echo "... test_bytearray"
 	@echo "... test_backtrace"
 	@echo "... test_fiber"
@@ -1455,6 +1550,9 @@ help:
 	@echo "... dzy/fiber.o"
 	@echo "... dzy/fiber.i"
 	@echo "... dzy/fiber.s"
+	@echo "... dzy/ftp/ftp_server.o"
+	@echo "... dzy/ftp/ftp_server.i"
+	@echo "... dzy/ftp/ftp_server.s"
 	@echo "... dzy/hook.o"
 	@echo "... dzy/hook.i"
 	@echo "... dzy/hook.s"
@@ -1476,6 +1574,9 @@ help:
 	@echo "... dzy/http/httpclient_parser.rl.o"
 	@echo "... dzy/http/httpclient_parser.rl.i"
 	@echo "... dzy/http/httpclient_parser.rl.s"
+	@echo "... dzy/http/servlet.o"
+	@echo "... dzy/http/servlet.i"
+	@echo "... dzy/http/servlet.s"
 	@echo "... dzy/iomanager.o"
 	@echo "... dzy/iomanager.i"
 	@echo "... dzy/iomanager.s"
@@ -1527,6 +1628,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_ftp_server.o"
+	@echo "... tests/test_ftp_server.i"
+	@echo "... tests/test_ftp_server.s"
 	@echo "... tests/test_hook.o"
 	@echo "... tests/test_hook.i"
 	@echo "... tests/test_hook.s"

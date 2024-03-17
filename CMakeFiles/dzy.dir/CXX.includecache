@@ -62,37 +62,25 @@ ucontext.h
 config.h
 /home/dada/project/dzy/config.h
 
-/home/dada/project/dzy/http/http.h
-bits/stdint-uintn.h
+/home/dada/project/dzy/ftp/ftp_server.cc
+ftp_server.h
+/home/dada/project/dzy/ftp/ftp_server.h
+cstring
+-
+ios
 -
 memory
 -
-ostream
--
-sstream
--
 string
 -
-map
+fstream
 -
 
-/home/dada/project/dzy/http/http_server.cc
-http_server.h
-/home/dada/project/dzy/http/http_server.h
-http.h
-/home/dada/project/dzy/http/http.h
-http_session.h
-/home/dada/project/dzy/http/http_session.h
-
-/home/dada/project/dzy/http/http_server.h
+/home/dada/project/dzy/ftp/ftp_server.h
 ../tcp_server.h
 /home/dada/project/dzy/tcp_server.h
-
-/home/dada/project/dzy/http/http_session.h
-../sockstream.h
-/home/dada/project/dzy/sockstream.h
-http.h
-/home/dada/project/dzy/http/http.h
+memory
+-
 
 /home/dada/project/dzy/iomanager.h
 atomic
@@ -173,12 +161,6 @@ sys/types.h
 -
 addr.h
 /home/dada/project/dzy/addr.h
-
-/home/dada/project/dzy/sockstream.h
-socket.h
-/home/dada/project/dzy/socket.h
-memory
--
 
 /home/dada/project/dzy/tcp_server.h
 memory

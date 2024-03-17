@@ -26,6 +26,8 @@ set (LIB_SRC
     dzy/http/http_parser.cc
     dzy/http/http_session.cc
     dzy/http/http_server.cc
+    dzy/http/servlet.cc
+    dzy/ftp/ftp_server.cc
     dzy/tcp_server.cc
     )
 
@@ -50,6 +52,10 @@ add_executable(test_addr tests/test_addr.cc)
 add_dependencies(test_addr dzy)
 target_link_libraries(test_addr ${LIB_LIB})
 
+
+add_executable(test_ftp_server tests/test_ftp_server.cc)
+add_dependencies(test_ftp_server dzy)
+target_link_libraries(test_ftp_server ${LIB_LIB})
 
 add_executable(test_tcp_server tests/test_tcp_server.cc)
 add_dependencies(test_tcp_server dzy)

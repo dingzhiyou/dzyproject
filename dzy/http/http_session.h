@@ -1,3 +1,4 @@
+#pragma once 
 #include "../sockstream.h"
 #include "http.h"
 

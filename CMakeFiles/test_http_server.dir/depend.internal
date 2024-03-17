@@ -5,12 +5,16 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o
  /home/dada/project/dzy/addr.h
  /home/dada/project/dzy/config.h
  /home/dada/project/dzy/fiber.h
+ /home/dada/project/dzy/http/http.h
  /home/dada/project/dzy/http/http_server.h
+ /home/dada/project/dzy/http/http_session.h
+ /home/dada/project/dzy/http/servlet.h
  /home/dada/project/dzy/iomanager.h
  /home/dada/project/dzy/log.h
  /home/dada/project/dzy/schedule.h
  /home/dada/project/dzy/singleton.h
  /home/dada/project/dzy/socket.h
+ /home/dada/project/dzy/sockstream.h
  /home/dada/project/dzy/tcp_server.h
  /home/dada/project/dzy/thread.h
  /home/dada/project/dzy/timer.h
